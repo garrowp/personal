@@ -26,7 +26,7 @@ const Intro = styled.div`
 const Banner = () => (
   <Wrapper>
     <div>
-      <h2>Hi!👋 My name is Peter.</h2>
+      <h2>Hi!👋 My name is Peter Garrow.</h2>
       <Intro>
         <div>
           <h3>I'm a </h3>
@@ -41,16 +41,16 @@ const Banner = () => (
         </div>
       </Intro>
     </div>
-    <div style={{ width: `50%` }}>
+    <div style={{ width: `50%`, position: `relative` }}>
       <div
         style={{
-          width: `460px`,
+          width: `100%`,
           background: `rgba(16, 57, 115, 0.89)`,
-          height: `340px`,
+          height: `100%`,
           borderRadius: `4px`,
           position: `absolute`,
-          top: `104px`,
-          right: `0`,
+          top: `-16px`,
+          left: `16px`,
         }}
       />
       <ProfileImage />
