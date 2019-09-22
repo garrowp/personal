@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-right: 4rem;
-  position: fixed;
+  // position: fixed;
   width: 100%;
   background-color: #fff;
   z-index: 10000;
