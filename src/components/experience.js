@@ -1,40 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Card, { ExperienceCard } from './card'
 import ToExperience from '../images/to-experience.svg'
+import ToExperienceSmall from '../images/to-experience-small.svg'
 import byu from "../images/byu.png"
 import adobe from '../images/adobe.png'
 import byuAthletics from '../images/byu_athletics.png'
 
-const Container = styled.div`
-    // margin-top: 3rem;
-    // height: 400px;
-`
-
-const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: auto ${960 / 2}px ${960 / 2}px auto;
-    grid-template-rows: auto auto;
-    grid-column-gap: 2rem;
-    // margin: 0 auto;
-    // max-width: 960px;
-    // padding: 0px 1.0875rem 2rem;
-    // padding-top: 5rem;
-    position: relative;
-`
-
-const CardContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-`
-
-const StyledUl = styled.ul`
-    font-size: .8rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-`
+import {
+    Container,
+    Wrapper,
+    CardContainer,
+    StyledUl,
+    ToExperienceWrapper,
+    ToExperienceImg,
+} from './experienceElements'
 
 const Experience = () => (
     <Container id='experience'>
@@ -105,8 +85,14 @@ const Experience = () => (
                     </ExperienceCard>
                 </CardContainer>
             </div>
-            <div style={{ position: `relative`, gridColumn: 1, gridRow: 1 }}>
-                <img 
+            <ToExperienceWrapper>
+                <picture>
+                    <source media="(min-width: 1368px)" srcset={ToExperience} />
+                    <source media="(min-width: 400px)" srcset={ToExperienceSmall} />
+                    <ToExperienceImg src={ToExperience} alt="Arrow to experience" />
+                </picture>
+
+                {/* <img 
                     src={ToExperience}
                     alt="Arrow to experience"
                     style={{
@@ -114,8 +100,8 @@ const Experience = () => (
                         top: 0,
                         right: 0,
                     }}
-                />
-            </div>
+                /> */}
+            </ToExperienceWrapper>
         </Wrapper>
     </Container>
 )
