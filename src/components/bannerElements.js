@@ -14,10 +14,13 @@ export const Wrapper = styled.div`
   padding-top: 8rem;
 
   @media screen and (max-width: 1368px) {
+    
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 `
 
@@ -31,11 +34,19 @@ export const IntroWrapper = styled.div`
   justify-self: center;
   align-self: center;
   grid-column: 2 / 3;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: 1;
+  }
 `
 
 export const PicWrapper = styled.div`
   position: relative;
   grid-column: 3 / 4;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: 2;
+  }
 `
 
 export const PicBackground = styled.div`
@@ -50,8 +61,12 @@ export const PicBackground = styled.div`
 
 export const IntroArrowWrapper = styled.div`
   grid-column: 2 / 4;
-  grid-row: 2 / 2;
+  grid-row: 2;
   text-align: center;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: 1 / 3;
+  }
 `
 
 export const IntroToAboutWrapper = styled.div`
@@ -62,6 +77,10 @@ export const IntroToAboutWrapper = styled.div`
   @media screen and (max-width: 1368px) {
     grid-column: 3;
     grid-row: 2;
+  }
+
+  @media screen and (max-width: 1100px) {
+    grid-column: 2;
   }
 `
 

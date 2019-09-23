@@ -10,6 +10,7 @@ import AboutToExperienceSmall from '../images/about-to-experience-small.svg'
 import {
   Container,
   Wrapper,
+  AboutMeHeaderWrapper,
   AboutMe,
   Technologies,
   ArrowCornerWrapper,
@@ -23,11 +24,9 @@ import {
 const About = () => (
   <Container id="about">
     <Wrapper>
-      <div style={{ gridColumn: `2 / 4`, gridRow: `1 / 2` }}>
+      <AboutMeHeaderWrapper>
         <h1 style={{ marginTop: `5rem` }}>About Me</h1>
-      </div>
-
-      <br />
+      </AboutMeHeaderWrapper>
       <AboutMe>
         <p>
           My name is Peter Garrow. I am currently studying at Brigham Young
@@ -66,7 +65,7 @@ const About = () => (
       <ToAboutWrapper>
         <picture>
           <source media="(min-width: 1368px)" srcset={ToAbout} />
-          <source media="(min-width: 1000px)" srcset={ToAboutSmall} />
+          <source media="(min-width: 400px)" srcset={ToAboutSmall} />
           <ToAboutImg src={ToAbout} alt="About Arrow" />
         </picture>
       </ToAboutWrapper>
@@ -74,7 +73,7 @@ const About = () => (
       <AboutToExperienceWrapper>
         <picture>
             <source media="(min-width: 1368px)" srcset={AboutToExperience} />
-            <source media="(min-width: 1000px)" srcSet={AboutToExperienceSmall} />
+            <source media="(min-width: 400px)" srcSet={AboutToExperienceSmall} />
             <AboutToExperienceImg src={AboutToExperience} alt="Arrow from about to experience" />
         </picture>
       </AboutToExperienceWrapper>

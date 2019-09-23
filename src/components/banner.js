@@ -53,7 +53,7 @@ const Banner = () => (
       <IntroToAboutWrapper>
         <picture>
           <source media="(min-width: 1368px)" srcset={IntroToAbout} />
-          <source media="(min-width: 1000px)" srcset={IntroToAboutSmall} />
+          <source media="(min-width: 400px)" srcset={IntroToAboutSmall} />
           <IntroToAboutImg
             src={IntroToAbout}
             alt="Intro to about arrow"

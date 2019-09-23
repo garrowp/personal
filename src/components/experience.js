@@ -10,6 +10,8 @@ import byuAthletics from '../images/byu_athletics.png'
 import {
     Container,
     Wrapper,
+    ExperienceHeaderWrapper,
+    ExperienceWrapper,
     CardContainer,
     StyledUl,
     ToExperienceWrapper,
@@ -20,10 +22,10 @@ const Experience = () => (
     <Container id='experience'>
         <Wrapper>
             
-            <div style={{ gridRow: 1, gridColumn: `2 / 4` }}>
+            <ExperienceHeaderWrapper>
                 <h1 style={{ marginTop: `4.5rem` }}>Experience</h1>
-            </div>
-            <div style={{ gridRow: 2, gridColumn: `2 / 4`, paddingBottom: `5rem` }}>
+            </ExperienceHeaderWrapper>
+            <ExperienceWrapper>
                 
                 <h3>Some of the things that I've done:</h3>
                 <CardContainer>
@@ -84,7 +86,7 @@ const Experience = () => (
                         </StyledUl>
                     </ExperienceCard>
                 </CardContainer>
-            </div>
+            </ExperienceWrapper>
             <ToExperienceWrapper>
                 <picture>
                     <source media="(min-width: 1368px)" srcset={ToExperience} />

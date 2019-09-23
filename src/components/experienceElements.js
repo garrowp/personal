@@ -16,6 +16,31 @@ export const Wrapper = styled.div`
     // padding-top: 5rem;
     position: relative;
     padding: 0 1rem;
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+`
+
+export const ExperienceHeaderWrapper = styled.div`
+    grid-row: 1;
+    grid-column: 2 / 4;
+
+    @media screen and (max-width: 1100px) {
+        grid-column: 1 / 3;
+    }
+`
+
+export const ExperienceWrapper = styled.div`
+    grid-row: 2;
+    grid-column: 2 / 4;
+    padding-bottom: 5rem;
+
+    @media screen and (max-width: 1100px) {
+        grid-column: 1 / 3;
+    }
 `
 
 export const CardContainer = styled.div`
@@ -37,6 +62,10 @@ export const ToExperienceWrapper = styled.div`
 
     @media screen and (max-width: 1368px) {
         grid-column: 2;
+    }
+
+    @media screen and (max-width: 1100px) {
+        grid-column: 1;
     }
 `
 
