@@ -10,6 +10,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
     padding: 1.5rem;
     margin: .5rem;
+    color: rgba(49, 139, 213);
 `;
 
 
