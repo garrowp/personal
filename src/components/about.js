@@ -5,7 +5,7 @@ import ToAbout from '../images/to-about.svg'
 import AboutToExperience from '../images/about-to-experience.svg'
 
 const Container = styled.div`
-    margin-top: 3rem;
+    // margin-top: 3rem;
     background: linear-gradient(135.93deg, #103973 29.06%, rgba(16, 57, 115, 0.78) 101.99%);
     background-blend-mode: darken;
     // height: 400px;
@@ -26,7 +26,7 @@ const About = () => (
             <h1>About Me</h1>
             <br />
             <p>
-                My name is Peter Garrow. I am currently studying at Brigham Young University to get my master's degree in Information Systems Management. 🎓
+                I am currently studying at Brigham Young University to get my master's degree in Information Systems Management. 🎓
                 My wife and I met in the Hill Cumorah Pageant, and we have a beautiful little girl named Kora. 👨👩👶 We are living in Utah while I finish my degree.
             </p>
             <p>
@@ -35,7 +35,7 @@ const About = () => (
             </p>
             <p>
                 Here are a few technologies I love to use:
-                <ul style={{ columnCount: 3 }}>
+                <ul style={{ columnCount: 3, marginLeft: `5rem` }}>
                     <li>JavaScript</li>
                     <li>React</li>
                     <li>Node</li>

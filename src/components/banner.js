@@ -5,8 +5,12 @@ import ProfileImage from "../components/image"
 import IntroArrow from "../images/intro-arrow.svg"
 import IntroToAbout from "../images/intro-to-about.svg"
 
+const Container = styled.div`
+
+`
+
 const Wrapper = styled.div`
-  height: 625px;
+  // height: 625px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +18,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 0px 1.0875rem 2rem;
-  padding-top: 0;
+  padding-top: 10rem;
+  padding-bottom: 16rem;
 `
 
 const Intro = styled.div`
@@ -55,16 +60,18 @@ const Banner = () => (
       />
       <ProfileImage />
     </div>
-    <img
-      src={IntroArrow}
-      alt="arrow"
-      style={{
-        position: `absolute`,
-        bottom: `16px`,
-        right: `175px`,
-        marginBottom: 0,
-      }}
-    />
+    <div>
+      <img
+        src={IntroArrow}
+        alt="arrow"
+        style={{
+          position: `absolute`,
+          bottom: 0,
+          transform: `translate(20%, -75%)`,
+          marginBottom: 0,
+        }}
+      />
+    </div>
     <img
       src={IntroToAbout}
       alt="Intro to about arrow"
