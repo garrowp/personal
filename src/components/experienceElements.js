@@ -47,6 +47,11 @@ export const CardContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+
+    @media screen and (max-width: 950px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const StyledUl = styled.ul`

@@ -6,8 +6,12 @@ const Container = styled.div`
     border-width: 4px 0px 0px 0px;
     border-color: rgba(49, 139, 213, 1);
     border-radius: 4px;
-border-style: solid;
-box-shadow: 0px 5px 8px 0px rgba(50, 50, 93, 0.17);
+    border-style: solid;
+    box-shadow: 0px 5px 8px 0px rgba(50, 50, 93, 0.17);
+
+    @media screen and (max-width: 950px) {
+        margin-top: 1.5rem;
+    }
 `
 
 const Card = ({ children }) => (
