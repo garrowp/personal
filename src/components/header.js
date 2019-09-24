@@ -158,8 +158,14 @@ const Toggle = styled.input`
 
 const Logo = () => (
   <LogoWrapper>
-    <ImageIcon />
-    <h4>Peter Garrow</h4>
+    <AnchorLink href="#banner">
+      <ImageIcon />
+    </AnchorLink>
+    <h4>
+      <AnchorLink href="#banner" style={{ textDecoration: `none`, color: `initial` }}>
+        Peter Garrow
+      </AnchorLink>
+    </h4>
   </LogoWrapper>
 )
 

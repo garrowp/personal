@@ -53,7 +53,7 @@ export const PicWrapper = styled.div`
 `
 
 const Banner = () => (
-  <Container>
+  <Container id="banner">
     <Wrapper banner>
       <IntroWrapper>
         <h2>
