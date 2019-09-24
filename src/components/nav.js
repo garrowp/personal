@@ -2,9 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Nav = styled.nav`
-    padding: 4rem;
-`;
 
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -13,9 +10,9 @@ const StyledLink = styled(Link)`
     color: #20477D;
 `;
 
-
-
 export default () => (
+
+
     <nav>
         <StyledLink to='/#about'>About</StyledLink>
         <StyledLink to='/#experience'>Experience</StyledLink>
