@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import ArrowEdge from "../images/arrow-edge.svg"
 import ToAbout from "../images/to-about.svg"
+import ToAboutMed from "../images/to-about-med.svg"
 import ToAboutSmall from "../images/to-about-small.svg"
 import AboutToExperience from "../images/about-to-experience.svg"
 import AboutToExperienceSmall from '../images/about-to-experience-small.svg'
@@ -65,6 +66,7 @@ const About = () => (
       <ToAboutWrapper>
         <picture>
           <source media="(min-width: 1368px)" srcset={ToAbout} />
+          <source media="(min-width: 1050px)" srcset={ToAboutMed} />
           <source media="(min-width: 400px)" srcset={ToAboutSmall} />
           <ToAboutImg src={ToAbout} alt="About Arrow" />
         </picture>
