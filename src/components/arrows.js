@@ -77,29 +77,30 @@ export const ToAboutWrapper = styled.div`
     grid-row: 1;
     grid-column: 2 / 4;
 
-    @media screen and (max-width: 1100px) {
-        grid-column: 1 / 3;
+    & img {
+        position: absolute;
+        bottom: 0;
+        right: -4rem;
+        margin-bottom: 0;
+    }
 
+    @media screen and (max-width: 1368px) {
         & img {
             right: 3rem;
         }
     }
 
     @media screen and (max-width: 1100px) {
-       & img {
-           bottom: -1px;
-       } 
+        grid-column: 1 / 3;
+
+        & img {
+            bottom: -1px;
+            right: 3rem;
+        }
     }
 
     @media screen and (max-width: 880px) {
         display: none;
-    }
-
-    & img {
-        position: absolute;
-        bottom: 0;
-        right: -4rem;
-        margin-bottom: 0;
     }
 `
 
