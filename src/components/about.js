@@ -1,4 +1,5 @@
 import React from "react"
+import styled from 'styled-components'
 
 import ArrowEdge from "../images/arrow-edge.svg"
 import ToAbout from "../images/to-about.svg"
@@ -8,22 +9,52 @@ import AboutToExperience from "../images/about-to-experience.svg"
 import AboutToExperienceSmall from '../images/about-to-experience-small.svg'
 
 import {
-  Container,
-  Wrapper,
-  AboutMeHeaderWrapper,
-  AboutMe,
-  Technologies,
   ArrowCornerWrapper,
   ToAboutWrapper,
   AboutToExperienceWrapper,
-  ArrowCornerImg,
-  ToAboutImg,
-  AboutToExperienceImg,
-} from "./aboutElements"
+} from "./arrows"
+
+import {
+  Wrapper,
+} from './common';
+
+export const Container = styled.div`
+    background: linear-gradient(135.93deg, #103973 29.06%, rgba(16, 57, 115, 0.78) 101.99%);
+    background-blend-mode: darken;
+`
+
+export const AboutMeHeaderWrapper = styled.div`
+    grid-column: 2;
+    grid-row: 1;
+
+    @media screen and (max-width: 1100px) {
+        grid-column: 1;
+    }
+`
+
+export const AboutMe = styled.div`
+    grid-column: 2 / 4;
+    grid-row: 2;
+
+    @media screen and (max-width: 1100px) {
+        grid-column: 1 / 3;
+    }
+    
+`
+
+export const Technologies = styled.ul`
+    column-count: 3;
+    margin-left: 8rem;
+
+    @media screen and (max-width: 880px) {
+        margin-left: 2.5rem;
+        column-count: 2;
+    }
+`
 
 const About = () => (
   <Container id="about">
-    <Wrapper>
+    <Wrapper about>
       <AboutMeHeaderWrapper>
         <h1 style={{ marginTop: `5rem` }}>About Me</h1>
       </AboutMeHeaderWrapper>
@@ -59,7 +90,7 @@ const About = () => (
       </AboutMe>
 
       <ArrowCornerWrapper>
-        <ArrowCornerImg src={ArrowEdge} alt="Arrow to about" />
+        <img src={ArrowEdge} alt="Arrow to about" />
       </ArrowCornerWrapper>
 
       <ToAboutWrapper>
@@ -67,7 +98,7 @@ const About = () => (
           <source media="(min-width: 1368px)" srcSet={ToAbout} />
           <source media="(min-width: 1050px)" srcSet={ToAboutMed} />
           <source media="(min-width: 400px)" srcSet={ToAboutSmall} />
-          <ToAboutImg src={ToAbout} alt="About Arrow" />
+          <img src={ToAbout} alt="About Arrow" />
         </picture>
       </ToAboutWrapper>
 
@@ -75,7 +106,7 @@ const About = () => (
         <picture>
             <source media="(min-width: 1368px)" srcSet={AboutToExperience} />
             <source media="(min-width: 400px)" srcSet={AboutToExperienceSmall} />
-            <AboutToExperienceImg src={AboutToExperience} alt="Arrow from about to experience" />
+            <img src={AboutToExperience} alt="Arrow from about to experience" />
         </picture>
       </AboutToExperienceWrapper>
     </Wrapper>
