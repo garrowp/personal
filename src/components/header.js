@@ -1,8 +1,9 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState, useeffect } from "react"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import styled from 'styled-components'
 
+import useWindowSize from '../hooks/useWindowSize'
 import Image from '../images/garrow_badge_photo.jpg'
 
 const StyledHeader = styled.header`
@@ -44,7 +45,7 @@ const StyledNav = styled.nav`
   }
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(AnchorLink)`
     text-decoration: none;
     padding: 1.5rem;
     margin: .5rem;
@@ -162,27 +163,36 @@ const Logo = () => (
   </LogoWrapper>
 )
 
-const NavBar = () => (
-  // <div style={{ display: `flex`, justifyContent: `flex-end`, alignItems: `center`  }}>
-    <>
+const NavBar = () => {
+  const size = useWindowSize();
+
+  const checkSize = ( width )  =>{
+    return width <= 880 ? 103 : 0;
+  }
+
+  return (
+     // <div style={{ display: `flex`, justifyContent: `flex-end`, alignItems: `center`  }}>
+      <>
       <Toggle id='toggle' type='checkbox' />
       <MenuLabel for='toggle'>
         <MenuButton />
       </MenuLabel>
 
       <StyledNav>
-          <StyledLink to='/#about'>About</StyledLink>
-          <StyledLink to='/#experience'>Experience</StyledLink>
-          <StyledLink to='/#contact'>Contact</StyledLink>
+          <StyledLink offset={checkSize(size.width)} href='#about'>About</StyledLink>
+          <StyledLink offset={checkSize(size.width)} href='#experience'>Experience</StyledLink>
+          <StyledLink offset={checkSize(size.width)} href='#contact'>Contact</StyledLink>
       </StyledNav>
     </>
   // </div>
-)
+  )
 
+}
+ 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <Logo />
-    <NavBar />
+      <Logo />
+      <NavBar />
   </StyledHeader>
 )
 
