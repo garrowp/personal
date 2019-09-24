@@ -22,6 +22,11 @@ export const Wrapper = styled.div`
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    @media screen and (max-width: 880px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const ExperienceHeaderWrapper = styled.div`
@@ -72,6 +77,10 @@ export const ToExperienceWrapper = styled.div`
     @media screen and (max-width: 1100px) {
         grid-column: 1;
     }
+
+    @media screen and (max-width: 880px) {
+        display: none;
+      }
 `
 
 export const ToExperienceImg = styled.img`

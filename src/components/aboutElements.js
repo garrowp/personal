@@ -24,6 +24,11 @@ export const Wrapper = styled.div`
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    @media screen and (max-width: 880px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const AboutMeHeaderWrapper = styled.div`
@@ -48,6 +53,11 @@ export const AboutMe = styled.div`
 export const Technologies = styled.ul`
     column-count: 3;
     margin-left: 8rem;
+
+    @media screen and (max-width: 880px) {
+        margin-left: 2.5rem;
+        column-count: 2;
+    }
 `
 
 export const ArrowCornerWrapper = styled.div`
@@ -61,6 +71,10 @@ export const ArrowCornerWrapper = styled.div`
 
     @media screen and (max-width: 1100px) {
         grid-column: 2;
+    }
+
+    @media screen and (max-width: 880px) {
+        display: none;
     }
 `
 
@@ -82,6 +96,10 @@ export const ToAboutWrapper = styled.div`
 
     @media screen and (max-width: 1100px) {
         grid-column: 1 / 3;
+    }
+
+    @media screen and (max-width: 880px) {
+        display: none;
     }
 `
 
@@ -111,6 +129,10 @@ export const AboutToExperienceWrapper = styled.div`
 
     @media screen and (max-width: 1100px) {
         grid-column: 1;
+    }
+
+    @media screen and (max-width: 880px) {
+        display: none;
     }
 `
 
