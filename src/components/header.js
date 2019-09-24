@@ -24,6 +24,9 @@ const StyledHeader = styled.header`
     position: fixed;
     justify-content: unset;
     align-items: center;
+    box-shadow: 0px 0px 6px 2px rgba(187, 187, 187, 0.2);
+    padding-bottom: 0;
+    padding-top: 1rem;
   }
 `
 
@@ -51,7 +54,7 @@ const StyledLink = styled(Link)`
       border-bottom: 1px solid #eee;
       margin: 0;
       padding: 1rem;
-      
+
     }
 `
 
@@ -109,7 +112,15 @@ const ImageIcon = styled.div`
 const LogoWrapper = styled.div`
   grid-area: logo;
   padding-left: 20px;
+  padding-bottom: 10px;
   visibility: hidden;
+  display: flex;
+  align-items: center;
+
+  & h4 {
+    padding-left: 1rem;
+    margin-bottom: 0;
+  }
 
   @media screen and (max-width: 880px) {
     visibility: visible;
@@ -147,6 +158,7 @@ const Toggle = styled.input`
 const Logo = () => (
   <LogoWrapper>
     <ImageIcon />
+    <h4>Peter Garrow</h4>
   </LogoWrapper>
 )
 
