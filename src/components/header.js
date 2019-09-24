@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState, useeffect } from "react"
+import React, { useRef } from "react"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import styled from 'styled-components'
 
@@ -165,23 +165,29 @@ const Logo = () => (
 
 const NavBar = () => {
   const size = useWindowSize();
+  const labelRef = useRef(null);
 
   const checkSize = ( width )  =>{
-    return width <= 880 ? 103 : 0;
+    return width <= 880 ? 100 : 0;
+  }
+
+  const clickHandler = () => {
+    console.log('here');
+    labelRef.current.click();
   }
 
   return (
      // <div style={{ display: `flex`, justifyContent: `flex-end`, alignItems: `center`  }}>
       <>
       <Toggle id='toggle' type='checkbox' />
-      <MenuLabel for='toggle'>
-        <MenuButton />
+      <MenuLabel htmlFor='toggle' ref={labelRef}>
+        <MenuButton onClick={() => console.log('clicking the button')}/>
       </MenuLabel>
 
       <StyledNav>
-          <StyledLink offset={checkSize(size.width)} href='#about'>About</StyledLink>
-          <StyledLink offset={checkSize(size.width)} href='#experience'>Experience</StyledLink>
-          <StyledLink offset={checkSize(size.width)} href='#contact'>Contact</StyledLink>
+          <StyledLink offset={checkSize(size.width)} href='#about' onClick={clickHandler}>About</StyledLink>
+          <StyledLink offset={checkSize(size.width)} href='#experience' onClick={clickHandler}>Experience</StyledLink>
+          <StyledLink offset={checkSize(size.width)} href='#contact' onClick={clickHandler}>Contact</StyledLink>
       </StyledNav>
     </>
   // </div>
