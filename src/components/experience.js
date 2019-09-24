@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card, { ExperienceCard } from './card'
+import { ExperienceCard } from './card'
 import ToExperience from '../images/to-experience.svg'
 import ToExperienceSmall from '../images/to-experience-small.svg'
 import byu from "../images/byu.png"
@@ -89,8 +89,8 @@ const Experience = () => (
             </ExperienceWrapper>
             <ToExperienceWrapper>
                 <picture>
-                    <source media="(min-width: 1368px)" srcset={ToExperience} />
-                    <source media="(min-width: 400px)" srcset={ToExperienceSmall} />
+                    <source media="(min-width: 1368px)" srcSet={ToExperience} />
+                    <source media="(min-width: 400px)" srcSet={ToExperienceSmall} />
                     <ToExperienceImg src={ToExperience} alt="Arrow to experience" />
                 </picture>
 

@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 
 import {
   Container,
@@ -22,7 +21,7 @@ const Banner = () => (
   <Container>
     <Wrapper>
       <IntroWrapper>
-        <h2>Hi!👋 My name is Peter Garrow.</h2>
+        <h2>Hi!<span role='img' aria-label='wave'>👋</span> My name is Peter Garrow.</h2>
         <Intro>
           <div>
             <h3>I'm a </h3>
@@ -52,8 +51,8 @@ const Banner = () => (
       </IntroArrowWrapper>
       <IntroToAboutWrapper>
         <picture>
-          <source media="(min-width: 1368px)" srcset={IntroToAbout} />
-          <source media="(min-width: 400px)" srcset={IntroToAboutSmall} />
+          <source media="(min-width: 1368px)" srcSet={IntroToAbout} />
+          <source media="(min-width: 400px)" srcSet={IntroToAboutSmall} />
           <IntroToAboutImg
             src={IntroToAbout}
             alt="Intro to about arrow"

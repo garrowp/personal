@@ -27,8 +27,6 @@ const Image = () => {
     }
   `)
 
-  console.log(data);
-
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{ borderRadius: `4px` }} />
 }
 
