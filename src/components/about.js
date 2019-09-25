@@ -47,6 +47,12 @@ export const Technologies = styled.ul`
     column-count: 3;
     margin-left: 8rem;
 
+    list-style: none;
+
+    & li:before {
+        content: '⇨ ';
+    }
+
     @media screen and (max-width: 880px) {
         margin-left: 2.5rem;
         column-count: 2;
