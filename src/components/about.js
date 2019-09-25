@@ -74,17 +74,6 @@ const About = () => (
                     recently, I studied how gender discrepancies in
                     technological majors within higher education can be
                     mitigated to contribute to a better gender balance in STEM.
-                    {/* fields. I am currently studying at Brigham Young University
-                    to get my master's degree in Information Systems Management.{" "}
-                    <span role="img" aria-label="graduation hat">
-                        🎓
-                    </span>{" "}
-                    My wife and I met in the Hill Cumorah Pageant in 2008 and
-                    have been happily married since 2016. We have a beautiful
-                    little girl named Kora.{" "}
-                    <span role="img" aria-label="family">
-                        👨👩👶
-                    </span>{" "} */}
                 </p>
                 <p>
                     School and work aside, I have a wonderful family! My wife

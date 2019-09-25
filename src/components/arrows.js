@@ -1,46 +1,46 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const IntroArrowWrapper = styled.div`
-  grid-column: 2 / 4;
-  grid-row: 2;
-  text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 2;
+    text-align: center;
 
-  @media screen and (max-width: 1100px) {
-    grid-column: 1 / 3;
-  }
+    @media screen and (max-width: 1100px) {
+        grid-column: 1 / 3;
+    }
 
-  @media screen and (max-width: 880px) {
-    display: none;
-  }
+    @media screen and (max-width: 880px) {
+        display: none;
+    }
 `
 
 export const IntroToAboutWrapper = styled.div`
-  grid-column: 4;
-  grid-row: 1 / 3;
-  position: relative;
+    grid-column: 4;
+    grid-row: 1 / 3;
+    position: relative;
 
-  @media screen and (max-width: 1368px) {
-    grid-column: 3;
-    grid-row: 2;
+    @media screen and (max-width: 1368px) {
+        grid-column: 3;
+        grid-row: 2;
+
+        & img {
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        grid-column: 2;
+    }
+
+    @media screen and (max-width: 880px) {
+        display: none;
+    }
 
     & img {
-      right: 0;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
     }
-  }
-
-  @media screen and (max-width: 1100px) {
-    grid-column: 2;
-  }
-
-  @media screen and (max-width: 880px) {
-    display: none;
-  }
-
-  & img {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0;
-  }
 `
 
 export const ArrowCornerWrapper = styled.div`
@@ -56,7 +56,7 @@ export const ArrowCornerWrapper = styled.div`
 
     @media screen and (max-width: 1368px) {
         grid-column: 3;
-        
+
         & img {
             left: unset;
             right: 0;
@@ -148,7 +148,7 @@ export const ToExperienceWrapper = styled.div`
     @media screen and (max-width: 1368px) {
         grid-column: 2;
 
-        & img  {
+        & img {
             right: unset;
         }
     }
@@ -159,26 +159,26 @@ export const ToExperienceWrapper = styled.div`
 
     @media screen and (max-width: 880px) {
         display: none;
-      }
+    }
 `
 
 export const ExperienceToContactWrapper = styled.div`
-      position: relative;
-      grid-row: 2;
-      grid-column: 3;
+    position: relative;
+    grid-row: 2;
+    grid-column: 3;
 
-      & img {
-          position: absolute;
-          bottom: 0;
-          right: 23px;
-          margin-bottom: 0;
-      }
+    & img {
+        position: absolute;
+        bottom: 0;
+        right: 23px;
+        margin-bottom: 0;
+    }
 
-      @media screen and (max-width: 1100px) {
-          grid-column: 2;
-      }
+    @media screen and (max-width: 1100px) {
+        grid-column: 2;
+    }
 
-      @media screen and (max-width: 880px) {
-          display: none;
-      }
+    @media screen and (max-width: 880px) {
+        display: none;
+    }
 `

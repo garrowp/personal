@@ -8,15 +8,19 @@ export const Wrapper = styled.div`
     margin: 0 auto;
     padding: 0 1rem;
 
-    ${props => props.banner && css`
-        padding-top: 8rem;
-    `}
+    ${props =>
+        props.banner &&
+        css`
+            padding-top: 8rem;
+        `}
 
-    ${props => props.about && css`
-        color: #fff;
-        position: relative;
-        grid-row-gap: 1.5rem;
-    `}
+    ${props =>
+        props.about &&
+        css`
+            color: #fff;
+            position: relative;
+            grid-row-gap: 1.5rem;
+        `}
 
     @media screen and (max-width: 1100px) {
         grid-template-columns: repeat(2, 1fr);
@@ -28,8 +32,10 @@ export const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
 
-        ${props => props.banner && css`
-            padding-top: 10rem;
-        `}
+        ${props =>
+            props.banner &&
+            css`
+                padding-top: 10rem;
+            `}
     }
 `

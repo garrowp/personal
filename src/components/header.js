@@ -180,7 +180,6 @@ const Logo = ({ title }) => (
 
 const NavBar = ({ isMenuOpen, toggleMenu }) => {
     const size = useWindowSize()
-    // const labelRef = useRef(null)
 
     const checkSize = width => {
         return width <= 880 ? 100 : 0
@@ -221,7 +220,6 @@ const NavBar = ({ isMenuOpen, toggleMenu }) => {
                 </StyledLink>
             </StyledNav>
         </>
-        // </div>
     )
 }
 
