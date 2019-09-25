@@ -61,35 +61,53 @@ const About = () => (
             </AboutMeHeaderWrapper>
             <AboutMe>
                 <p>
-                    My name is Peter Garrow. I am currently studying at Brigham
-                    Young University to get my master's degree in Information
-                    Systems Management.{" "}
+                    In April 2020, I will be graduating from Brigham Young
+                    University with a Master's in Information Systems
+                    Management.{" "}
+                    <span role="img" aria-label="graduation">
+                        👨‍🎓🎓
+                    </span>{" "}
+                    My web development experience ranges from class and personal
+                    projects to jobs with BYU Athletics and Adobe Analytics'
+                    Workspace UI team. Academically, I have also been involved
+                    in research within the field of Information Systems. Most
+                    recently, I studied how gender discrepancies in
+                    technological majors within higher education can be
+                    mitigated to contribute to a better gender balance in STEM.
+                    {/* fields. I am currently studying at Brigham Young University
+                    to get my master's degree in Information Systems Management.{" "}
                     <span role="img" aria-label="graduation hat">
                         🎓
                     </span>{" "}
-                    My wife and I met in the Hill Cumorah Pageant, and we have a
-                    beautiful little girl named Kora.{" "}
+                    My wife and I met in the Hill Cumorah Pageant in 2008 and
+                    have been happily married since 2016. We have a beautiful
+                    little girl named Kora.{" "}
                     <span role="img" aria-label="family">
                         👨👩👶
-                    </span>{" "}
-                    We are living in Utah while I finish my degree.
+                    </span>{" "} */}
                 </p>
                 <p>
-                    I served a 2-year church mission in Cambodia{" "}
-                    <span role="img" aria-label="cambodia flag">
+                    School and work aside, I have a wonderful family! My wife
+                    and I met in the Hill Cumorah Pageant in 2008 and have been
+                    married since 2016. We have a beautiful little girl named
+                    Kora.{" "}
+                    <span role="img" aria-label="family">
+                        👱‍♂️👱‍♀️👶
+                    </span>{" "}
+                    Janessa (my wife) is currently enrolled in Lambda School's
+                    web development program and is killing it!
+                </p>
+                <p>
+                    I lived in Cambodia from 2013-2015 as a missionary for the
+                    Church of Jesus Christ of Latter-day Saints.{" "}
+                    <span role="img" aria-label="Cambodia Flag">
                         🇰🇭
                     </span>{" "}
-                    and would love to go back sometime. I learned the language
-                    and everything but I'm a little rusty at this point so if
-                    you want to chat in ភាសាស្មែរ sometime, hit me up via my
-                    contact info below.{" "}
-                    <span role="img" aria-label="point down">
+                    I learned how to speak, read, and write the language, but
+                    I'm getting a bit rusty. If you want to chat in ភាសារខ្មែរ,
+                    reach out via my contact info below!{" "}
+                    <span role="img" aria-label="Point down">
                         👇
-                    </span>{" "}
-                    I learned how to cook Cambodian food while I was there and
-                    love to cook and eat. Espeically rice{" "}
-                    <span role="img" aria-label="rice">
-                        🍚🍚
                     </span>
                 </p>
                 <p>Here are a few technologies I love to use:</p>

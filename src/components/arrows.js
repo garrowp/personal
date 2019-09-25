@@ -161,3 +161,24 @@ export const ToExperienceWrapper = styled.div`
         display: none;
       }
 `
+
+export const ExperienceToContactWrapper = styled.div`
+      position: relative;
+      grid-row: 2;
+      grid-column: 3;
+
+      & img {
+          position: absolute;
+          bottom: 0;
+          right: 23px;
+          margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 1100px) {
+          grid-column: 2;
+      }
+
+      @media screen and (max-width: 880px) {
+          display: none;
+      }
+`

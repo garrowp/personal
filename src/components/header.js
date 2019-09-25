@@ -156,14 +156,14 @@ const Toggle = styled.input`
   }
 `
 
-const Logo = () => (
+const Logo = ({ title }) => (
   <LogoWrapper>
     <AnchorLink href="#banner">
       <ImageIcon />
     </AnchorLink>
     <h4>
       <AnchorLink href="#banner" style={{ textDecoration: `none`, color: `initial` }}>
-        Peter Garrow
+        {title}
       </AnchorLink>
     </h4>
   </LogoWrapper>
@@ -203,7 +203,7 @@ const NavBar = () => {
  
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-      <Logo />
+      <Logo title={siteTitle} />
       <NavBar />
   </StyledHeader>
 )

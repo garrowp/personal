@@ -7,6 +7,7 @@ import {
   faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import ToContactImg from '../images/to-contact.svg'
 
 const Container = styled.div`
   // margin-top: 3rem;
@@ -17,16 +18,23 @@ const Container = styled.div`
   );
   background-blend-mode: darken;
   // height: 200px;
+  // padding-right: 2rem;
 `
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 1.0875rem 2rem;
+  max-width: calc(960px + 2rem);
+  // padding: 0px 1.0875rem 2rem;
   padding-top: 5rem;
   color: #fff;
   position: relative;
   text-align: right;
+  // padding-right: 2rem;
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: 1100px) {
+    margin-right: 2rem;
+  }
 `
 
 const IconLink = styled.a`
@@ -35,7 +43,17 @@ const IconLink = styled.a`
 
 const Icon = styled(FontAwesomeIcon)`
   font-size: 3rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
+`
+
+const ToContactArrow = styled.img`
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media screen and (max-width: 880px) {
+      display: none;
+    }
 `
 
 const Contact = () => (
@@ -57,6 +75,10 @@ const Contact = () => (
       <IconLink href="mailto:garrow.peter@gmail.com">
         <Icon icon={faEnvelope} />
       </IconLink>
+      <ToContactArrow
+        src={ToContactImg}
+        alt="To contact arrow"
+      />
     </Wrapper>
   </Container>
 )
