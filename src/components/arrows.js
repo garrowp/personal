@@ -167,6 +167,8 @@ export const ExperienceToContactWrapper = styled.div`
     grid-row: 2;
     grid-column: 3;
 
+    z-index: -100;
+
     & img {
         position: absolute;
         bottom: 0;
