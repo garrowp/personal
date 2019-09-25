@@ -37,7 +37,7 @@ export const ExperienceCard = ({ employer, startDate, endDate, image, title, chi
         </div>
         <div style={{ display: `flex` }}>
             <p style={{ margin: 0, flexGrow: 1 }}>{title}</p>
-            <small style={{ textAlign: `right`, marginBottom: 0, maxWidth: `50%` }}>{startDate} - {endDate}</small>
+            <small style={{ textAlign: `right`, marginBottom: 0, maxWidth: `50%`, minWidth: `36%` }}>{startDate} - {endDate}</small>
         </div>
         {children}
     </Card>
