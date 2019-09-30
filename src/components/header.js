@@ -164,13 +164,14 @@ const Toggle = styled.input`
 
 const Logo = ({ title }) => (
     <LogoWrapper>
-        <AnchorLink href="#banner">
+        <AnchorLink href="#banner" aria-label="Profile Image">
             <ImageIcon />
         </AnchorLink>
         <h4>
             <AnchorLink
                 href="#banner"
                 style={{ textDecoration: `none`, color: `initial` }}
+                aria-label="Site name"
             >
                 {title}
             </AnchorLink>
@@ -191,7 +192,7 @@ const NavBar = ({ isMenuOpen, toggleMenu }) => {
 
     return (
         <>
-            <Toggle id="toggle" type="checkbox" checked={isMenuOpen} onChange={() => toggleMenu(isMenuOpen)} />
+            <Toggle id="toggle" type="checkbox" name='toggle' aria-label="Hamburger menu toggle" checked={isMenuOpen} onChange={() => toggleMenu(isMenuOpen)} />
             <MenuLabel htmlFor="toggle" onClick={() => toggleMenu(!isMenuOpen)}>
                 <MenuButton />
             </MenuLabel>

@@ -108,6 +108,7 @@ const Experience = () => (
                                     href="https://www.youtube.com/watch?v=4rrnWwzwb38"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Watch a video about drop down guides"
                                 >
                                     new guide indicators
                                 </a>{" "}
@@ -121,6 +122,7 @@ const Experience = () => (
                                     href="https://www.youtube.com/watch?v=vpJywtsFVPI"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Watch a video about segmentation"
                                 >
                                     customized segmentation
                                 </a>{" "}
@@ -168,7 +170,7 @@ const Experience = () => (
                         employer="DuPont"
                         startDate="May '16"
                         endDate="Mar '17"
-                        image="http://eidupont.scene7.com/is/image/eidupont/DPT_DuPont_Logo_Thumbnail_690x345?$Full-Width-D$"
+                        image="https://upload.wikimedia.org/wikipedia/en/a/a3/DuPont_logo.svg"
                         title="Contracted Programmer"
                     >
                         <StyledUl>

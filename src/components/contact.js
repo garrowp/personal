@@ -55,19 +55,35 @@ const Contact = () => (
     <Container id="contact">
         <Wrapper>
             <h2 style={{ textAlign: `right` }}>Contact</h2>
-            <IconLink href="https://github.com/garrowp" target="_blank">
+            <IconLink
+                href="https://github.com/garrowp"
+                target="_blank"
+                aria-label="Check out my GitHub"
+                rel="noopener noreferrer"
+            >
                 <Icon icon={faGithubSquare} />
             </IconLink>
             <IconLink
                 href="https://www.linkedin.com/in/peter-garrow/"
                 target="_blank"
+                aria-label="Check out my LinkedIn"
+                rel="noopener noreferrer"
             >
                 <Icon icon={faLinkedin} />
             </IconLink>
-            <IconLink href="https://twitter.com/PeterGarrow" target="_blank">
+            <IconLink
+                href="https://twitter.com/PeterGarrow"
+                target="_blank"
+                aria-label="Check out my Twitter"
+                rel="noopener noreferrer"
+            >
                 <Icon icon={faTwitterSquare} />
             </IconLink>
-            <IconLink href="mailto:garrow.peter@gmail.com">
+            <IconLink
+                href="mailto:garrow.peter@gmail.com"
+                aria-label="Send me an email"
+                rel="noopener noreferrer"
+            >
                 <Icon icon={faEnvelope} />
             </IconLink>
             <ToContactArrow src={ToContactImg} alt="To contact arrow" />
