@@ -167,7 +167,7 @@ const Experience = () => (
                     <ExperienceCard
                         employer="DuPont"
                         startDate="May '16"
-                        endDate="Aug '16"
+                        endDate="Mar '17"
                         image="http://eidupont.scene7.com/is/image/eidupont/DPT_DuPont_Logo_Thumbnail_690x345?$Full-Width-D$"
                         title="Contracted Programmer"
                     >

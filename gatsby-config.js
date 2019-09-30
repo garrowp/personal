@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Peter Garrow`,
+    title: `Peter Garrow | Web Developer`,
     description: `My personal site!`,
     author: `Peter Garrow`,
     social: [
@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Peter Garrow | Web Developer`,
+        short_name: `Peter Garrow`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
