@@ -1,13 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import { IntroArrowWrapper, IntroToAboutWrapper } from "./arrows"
 import { Wrapper } from "./common"
+import IntroArrow from "./arrows/intro-arrow"
+import IntroToAbout from "./arrows/intro-to-about-arrow"
 
 import ProfileImage from "../components/image"
-import IntroArrow from "../images/intro-arrow.svg"
-import IntroToAbout from "../images/intro-to-about.svg"
-import IntroToAboutSmall from "../images/intro-to-about-small.svg"
 
 export const Container = styled.div`
     position: relative;
@@ -81,25 +79,8 @@ const Banner = () => (
                 <div className="pic-bkgd" />
                 <ProfileImage />
             </PicWrapper>
-            <IntroArrowWrapper>
-                <img
-                    src={IntroArrow}
-                    alt="arrow"
-                    style={{
-                        marginTop: `-3rem`,
-                    }}
-                />
-            </IntroArrowWrapper>
-            <IntroToAboutWrapper>
-                <picture>
-                    <source media="(min-width: 1368px)" srcSet={IntroToAbout} />
-                    <source
-                        media="(min-width: 400px)"
-                        srcSet={IntroToAboutSmall}
-                    />
-                    <img src={IntroToAbout} alt="Intro to about arrow" />
-                </picture>
-            </IntroToAboutWrapper>
+            <IntroArrow />
+            <IntroToAbout />
         </Wrapper>
     </Container>
 )
