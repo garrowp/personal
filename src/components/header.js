@@ -187,17 +187,24 @@ const NavBar = ({ isMenuOpen, toggleMenu }) => {
     }
 
     const clickHandler = () => {
-        toggleMenu(false);
+        toggleMenu(false)
     }
 
     return (
         <>
-            <Toggle id="toggle" type="checkbox" name='toggle' aria-label="Hamburger menu toggle" checked={isMenuOpen} onChange={() => toggleMenu(isMenuOpen)} />
+            <Toggle
+                id="toggle"
+                type="checkbox"
+                name="toggle"
+                aria-label="Hamburger menu toggle"
+                checked={isMenuOpen}
+                onChange={() => toggleMenu(isMenuOpen)}
+            />
             <MenuLabel htmlFor="toggle" onClick={() => toggleMenu(!isMenuOpen)}>
                 <MenuButton />
             </MenuLabel>
 
-            <StyledNav >
+            <StyledNav>
                 <StyledLink
                     offset={checkSize(size.width)}
                     href="#about"
@@ -226,7 +233,7 @@ const NavBar = ({ isMenuOpen, toggleMenu }) => {
 
 const Header = ({ siteTitle }) => {
     const navRef = useRef(null)
-    const [isMenuOpen, toggleMenu] = useState(false);
+    const [isMenuOpen, toggleMenu] = useState(false)
 
     useOnClickOutside(navRef, () => {
         toggleMenu(false)
@@ -239,7 +246,6 @@ const Header = ({ siteTitle }) => {
         </StyledHeader>
     )
 }
-
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
