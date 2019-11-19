@@ -25,6 +25,7 @@ const ExperienceWrapper = styled.div`
 	grid-row: 2;
 	grid-column: 2 / 4;
 	padding-bottom: 5rem;
+	z-index: 100;
 
 	@media screen and (max-width: 1100px) {
 		grid-column: 1 / 3;

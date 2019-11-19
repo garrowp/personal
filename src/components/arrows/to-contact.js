@@ -21,7 +21,7 @@ export default () => (
             xmlns="http://www.w3.org/2000/svg"
 			alt="To Contact Arrow"
 			sx={{
-				stroke: `background`,
+				stroke: `accent`,
 			}}
 		>
 			<path

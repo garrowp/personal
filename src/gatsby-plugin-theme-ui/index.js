@@ -5,6 +5,17 @@ export default {
 		primary: "#103973",
 		primaryLight: "#103973c7",
 		secondary: "rgba(49, 139, 213, .5)",
+		accent: "#fff",
+		modes: {
+			dark: {
+				text: "#fff",
+				background: "#10213C",
+				primary: "#21325A",
+				primaryLight: "#21325A",
+				secondary: "#14ffec",
+				accent: "#F7BF00",
+			},
+		},
 	},
 	fonts: {
 		body: "system-ui, sans-serif",
@@ -24,8 +35,10 @@ export default {
 	space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 	gradients: {
 		about: {
-			background: t =>
-				`linear-gradient(135deg, ${t.colors.primary} 29%, ${t.colors.primaryLight} 102%)`,
+			background: t => {
+				console.log(t)
+				return `linear-gradient(135deg, ${t.colors.primary} 29%, ${t.colors.primaryLight} 102%)`
+			},
 		},
 		contact: {
 			background: t =>

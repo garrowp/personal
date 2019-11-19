@@ -11,7 +11,7 @@ const LargeArrow = () => (
         xmlns="http://www.w3.org/2000/svg"
 		alt="About to Experience Arrow"
 		sx={{
-			stroke: `background`,
+			stroke: `accent`,
 		}}
 	>
 		<path
@@ -30,7 +30,7 @@ const SmallArrow = () => (
         xmlns="http://www.w3.org/2000/svg"
 		alt="About to Experience Arrow"
 		sx={{
-			stroke: `background`,
+			stroke: `accent`,
 		}}
 	>
 		<path d="M2 0V122M44 38V122" strokeWidth="4" />

@@ -8,8 +8,6 @@ export default () => (
 			gridRow: 2,
 			gridColumn: 3,
 
-			zIndex: -100,
-
 			"& svg": {
 				position: `absolute`,
 				bottom: 0,

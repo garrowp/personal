@@ -11,7 +11,7 @@ const Arrow = () => (
         alt="About arrow"
 		preserveAspectRatio="none"
 		sx={{
-			stroke: `background`,
+			stroke: `accent`,
 		}}
 	>
 		<path
