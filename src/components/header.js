@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useRef, useState } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import useOnClickOutside from "../hooks/useOnClickOutside"
 import useWindowSize from "../hooks/useWindowSize"

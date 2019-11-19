@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // export const IntroArrowWrapper = styled.div`
 //     grid-column: 2 / 4;

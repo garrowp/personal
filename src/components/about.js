@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import AboutCornerArrow from "./arrows/about-corner-arrow"
 import ToAboutArrow from "./arrows/about-arrow"
