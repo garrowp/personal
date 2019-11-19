@@ -1,39 +1,15 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from "theme-ui"
+import { jsx } from "theme-ui"
+import React from "react"
 import PropTypes from "prop-types"
-import React, { useRef, useState } from "react"
+import { useRef, useState } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import styled from "@emotion/styled"
 
 import useOnClickOutside from "../hooks/useOnClickOutside"
 import useWindowSize from "../hooks/useWindowSize"
 import Image from "../images/garrow_badge_photo.jpg"
-
-const StyledHeader = styled.header`
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	padding-top: 1.5rem;
-	padding-bottom: 1rem;
-	padding-right: 4rem;
-	width: 100%;
-	background-color: #fff;
-	z-index: 10000;
-
-	@media screen and (max-width: 880px) {
-		padding-right: 0;
-		display: grid;
-		grid-template-areas:
-			"logo logo menu"
-			"nav nav nav";
-		position: fixed;
-		justify-content: unset;
-		align-items: center;
-		box-shadow: 0px 0px 6px 2px rgba(187, 187, 187, 0.2);
-		padding-bottom: 0;
-		padding-top: 1rem;
-	}
-`
+import ToggleColorMode from "./toggle"
 
 const StyledNav = styled.nav`
 	transition: all 0.2s ease-in-out;
@@ -45,15 +21,15 @@ const StyledNav = styled.nav`
 		text-align: center;
 		overflow: hidden;
 		max-height: 0;
-		background-color: ${ p => p.theme.colors.background};
+		background-color: ${p => p.theme.colors.background};
 	}
 `
 
 const StyledLink = styled(AnchorLink)`
 	text-decoration: none;
 	padding: 1.5rem;
-    margin: 0.5rem;
-    color: ${p => p.theme.colors.text};
+	margin: 0.5rem;
+	color: ${p => p.theme.colors.text};
 
 	@media screen and (max-width: 880px) {
 		border-bottom: 1px solid #eee;
@@ -183,7 +159,6 @@ const Logo = ({ title }) => (
 
 const NavBar = ({ isMenuOpen, toggleMenu }) => {
 	const size = useWindowSize()
-	const [colorMode, setColorMode] = useColorMode()
 
 	const checkSize = width => {
 		return width <= 880 ? 100 : 0
@@ -229,15 +204,8 @@ const NavBar = ({ isMenuOpen, toggleMenu }) => {
 				>
 					Contact
 				</StyledLink>
-				<button
-					onClick={e => {
-                        console.log(colorMode)
-						setColorMode(colorMode === "light" ? "dark" : "light")
-					}}
-				>
-					color mode
-				</button>
 			</StyledNav>
+			<ToggleColorMode sx={{ gridArea: `toggle` }} />
 		</>
 	)
 }
@@ -266,7 +234,8 @@ const Header = ({ siteTitle }) => {
 				"@media screen and (max-width: 880px)": {
 					paddingRight: 0,
 					display: `grid`,
-					gridTemplateAreas: `"logo logo menu"
+					gridTemplateColumns: `1fr`,
+					gridTemplateAreas: `"logo toggle menu"
                                         "nav nav nav"`,
 					position: `fixed`,
 					justifyContent: `unset`,
