@@ -9,7 +9,8 @@ const LargeArrow = () => (
 		height="532"
 		viewBox="0 0 115 532"
 		fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg"
+		alt="Intro to About Arrow"
 	>
 		<path
 			d="M30.5 44H67C68.1046 44 69 44.8954 69 46V531V532M0.5 2H111C112.105 2 113 2.89543 113 4V532"
@@ -25,7 +26,8 @@ const SmallArrow = () => (
 		height="160"
 		viewBox="0 0 48 160"
 		fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg"
+		alt="Intro to About Arrow"
 	>
 		<path
 			d="M2 22.3188V160M46 0V160"

@@ -1,47 +1,47 @@
 import styled from "styled-components"
 
-export const IntroArrowWrapper = styled.div`
-    grid-column: 2 / 4;
-    grid-row: 2;
-    text-align: center;
+// export const IntroArrowWrapper = styled.div`
+//     grid-column: 2 / 4;
+//     grid-row: 2;
+//     text-align: center;
 
-    @media screen and (max-width: 1100px) {
-        grid-column: 1 / 3;
-    }
+//     @media screen and (max-width: 1100px) {
+//         grid-column: 1 / 3;
+//     }
 
-    @media screen and (max-width: 880px) {
-        display: none;
-    }
-`
+//     @media screen and (max-width: 880px) {
+//         display: none;
+//     }
+// `
 
-export const IntroToAboutWrapper = styled.div`
-    grid-column: 4;
-    grid-row: 1 / 3;
-    position: relative;
+// export const IntroToAboutWrapper = styled.div`
+//     grid-column: 4;
+//     grid-row: 1 / 3;
+//     position: relative;
 
-    @media screen and (max-width: 1368px) {
-        grid-column: 3;
-        grid-row: 2;
+//     @media screen and (max-width: 1368px) {
+//         grid-column: 3;
+//         grid-row: 2;
 
-        & img {
-            right: 0;
-        }
-    }
+//         & img {
+//             right: 0;
+//         }
+//     }
 
-    @media screen and (max-width: 1100px) {
-        grid-column: 2;
-    }
+//     @media screen and (max-width: 1100px) {
+//         grid-column: 2;
+//     }
 
-    @media screen and (max-width: 880px) {
-        display: none;
-    }
+//     @media screen and (max-width: 880px) {
+//         display: none;
+//     }
 
-    & img {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 0;
-    }
-`
+//     & img {
+//         position: absolute;
+//         bottom: 0;
+//         margin-bottom: 0;
+//     }
+// `
 
 export const ArrowCornerWrapper = styled.div`
     position: relative;

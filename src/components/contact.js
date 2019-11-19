@@ -7,7 +7,8 @@ import {
     faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import ToContactImg from "../images/to-contact.svg"
+
+import ToContactArrow from "./arrows/to-contact"
 
 const Container = styled.div`
     background: linear-gradient(
@@ -39,16 +40,6 @@ const IconLink = styled.a`
 const Icon = styled(FontAwesomeIcon)`
     font-size: 3rem;
     margin-left: 1.5rem;
-`
-
-const ToContactArrow = styled.img`
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    @media screen and (max-width: 880px) {
-        display: none;
-    }
 `
 
 const Contact = () => (
@@ -86,7 +77,7 @@ const Contact = () => (
             >
                 <Icon icon={faEnvelope} />
             </IconLink>
-            <ToContactArrow src={ToContactImg} alt="To contact arrow" />
+            <ToContactArrow />
         </Wrapper>
     </Container>
 )
