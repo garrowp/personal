@@ -7,14 +7,16 @@ export default {
 		primaryLight: "#103973c7",
 		secondary: "rgba(49, 139, 213, .5)",
 		accent: "#fff",
+		card: "#fff",
 		modes: {
 			dark: {
 				text: "#fff",
 				background: "#10213C",
 				primary: "#21325A",
 				primaryLight: "#21325A",
-				secondary: "#14ffec",
-				accent: "#F7BF00",
+				secondary: "#F7BF00",
+				accent: "#14ffec",
+				card: "#21325A",
 			},
 		},
 	},

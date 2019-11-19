@@ -1,13 +1,15 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { lighten } from "@theme-ui/color"
 
 const Container = styled.div`
     padding: 0.5rem;
     border-width: 4px 0px 0px 0px;
-    border-color: rgba(49, 139, 213, 1);
+    border-color: ${p => p.theme.colors.secondary};
     border-radius: 4px;
     border-style: solid;
-    box-shadow: 0px 5px 8px 0px rgba(50, 50, 93, 0.17);
+    box-shadow: 0px 2px 6px 0px ${p => lighten(p.theme.colors.primary, .5)};
+    background-color: ${p => p.theme.colors.card};
 
     @media screen and (max-width: 950px) {
         margin-top: 1.5rem;

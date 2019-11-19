@@ -35,6 +35,7 @@ export const PicWrapper = styled.div`
 	& > div.pic-bkgd {
 		width: 100%;
 		background: rgba(16, 57, 115, 0.89);
+		background: ${p => p.theme.colors.primary};
 		height: 100%;
 		border-radius: 4px;
 		position: absolute;

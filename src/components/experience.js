@@ -49,8 +49,8 @@ export const StyledUl = styled.ul`
 
 	& a {
 		text-decoration: none;
-		color: initial;
-		border-bottom: 1px dotted #000;
+		color: ${p => p.theme.colors.text};
+		border-bottom: 1px dotted ${p => p.theme.colors.text};
 	}
 `
 
