@@ -9,11 +9,13 @@ const LargeArrow = () => (
 		viewBox="0 0 111 201"
 		fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        alt="About to Experience Arrow"
+		alt="About to Experience Arrow"
+		sx={{
+			stroke: `background`,
+		}}
 	>
 		<path
 			d="M110.5 2H4C2.89543 2 2 2.89543 2 4V201M86.5 40H46C44.8954 40 44 40.8954 44 42V201"
-			stroke="white"
 			strokeWidth="4"
 		/>
 	</svg>
@@ -26,9 +28,12 @@ const SmallArrow = () => (
 		viewBox="0 0 46 121"
 		fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        alt="About to Experience Arrow"
+		alt="About to Experience Arrow"
+		sx={{
+			stroke: `background`,
+		}}
 	>
-		<path d="M2 0V122M44 38V122" stroke="white" strokeWidth="4" />
+		<path d="M2 0V122M44 38V122" strokeWidth="4" />
 	</svg>
 )
 

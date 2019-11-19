@@ -32,12 +32,13 @@ export default () => (
 			viewBox="0 0 46 67"
 			fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            alt="Experience to Contact Arrow"
+			alt="Experience to Contact Arrow"
+			sx={{
+				stroke: `secondary`
+			}}
 		>
 			<path
 				d="M2 27V67M44 0V67"
-				stroke="#318BD5"
-				strokeOpacity="0.5"
 				strokeWidth="4"
 			/>
 		</svg>

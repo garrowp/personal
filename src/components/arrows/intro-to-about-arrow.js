@@ -11,10 +11,12 @@ const LargeArrow = () => (
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 		alt="Intro to About Arrow"
+		sx={{
+			stroke: `secondary`
+		}}
 	>
 		<path
 			d="M30.5 44H67C68.1046 44 69 44.8954 69 46V531V532M0.5 2H111C112.105 2 113 2.89543 113 4V532"
-			stroke="rgba(49, 139, 213, .5)"
 			strokeWidth="4"
 		/>
 	</svg>
@@ -28,10 +30,12 @@ const SmallArrow = () => (
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
 		alt="Intro to About Arrow"
+		sx={{
+			stroke: `secondary`
+		}}
 	>
 		<path
 			d="M2 22.3188V160M46 0V160"
-			stroke="rgba(49, 139, 213, .5)"
 			strokeWidth="4"
 		/>
 	</svg>

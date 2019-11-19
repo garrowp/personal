@@ -37,12 +37,14 @@ export default () => (
 			height="139"
 			viewBox="0 0 115 139"
 			fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Corner Arrow"
+			xmlns="http://www.w3.org/2000/svg"
+			alt="Corner Arrow"
+			sx={{
+				stroke: `background`,
+			}}
 		>
 			<path
 				d="M69 0V98.5C69 99.6046 68.1046 100.5 67 100.5H0.5M113 0V134.5C113 135.605 112.105 136.5 111 136.5H0.5"
-				stroke="white"
 				strokeWidth="4"
 			/>
 		</svg>
