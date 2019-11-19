@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import React from "react"
 import styled from "@emotion/styled"
 
@@ -6,15 +8,6 @@ import ToAboutArrow from "./arrows/about-arrow"
 import AboutToExperienceArrow from "./arrows/about-to-experience"
 
 import { Wrapper } from "./common"
-
-export const Container = styled.div`
-	background: linear-gradient(
-		135.93deg,
-		#103973 29.06%,
-		rgba(16, 57, 115, 0.78) 101.99%
-	);
-	background-blend-mode: darken;
-`
 
 export const AboutMeHeaderWrapper = styled.div`
 	grid-column: 2;
@@ -51,7 +44,13 @@ export const Technologies = styled.ul`
 `
 
 const About = () => (
-	<Container id="about">
+	<div
+		id="about"
+		sx={{
+			variant: `gradients.about`,
+			backgroundBlendMode: `darken`,
+		}}
+	>
 		<Wrapper about="true">
 			<AboutMeHeaderWrapper>
 				<h1 style={{ marginTop: `5rem` }}>About Me</h1>
@@ -113,7 +112,7 @@ const About = () => (
 			<ToAboutArrow />
 			<AboutToExperienceArrow />
 		</Wrapper>
-	</Container>
+	</div>
 )
 
 export default About

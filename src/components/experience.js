@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import React from "react"
 import styled from "@emotion/styled"
 
@@ -53,7 +55,7 @@ export const StyledUl = styled.ul`
 `
 
 const Experience = () => (
-	<div id="experience">
+	<div id="experience" sx={{ backgroundColor: `background`}}>
 		<Wrapper>
 			<ExperienceHeaderWrapper>
 				<h1 style={{ marginTop: `4.5rem` }}>Experience</h1>

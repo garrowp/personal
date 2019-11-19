@@ -44,7 +44,6 @@ const SmallArrow = () => (
 export default () => {
 	const size = useWindowSize()
     const width = size.width
-    console.log(width)
 
 	return (
 		<div
