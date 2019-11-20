@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import useWindowSize from "../../hooks/useWindowSize"
 
 const LargeArrow = () => (
 	<svg
@@ -8,10 +7,13 @@ const LargeArrow = () => (
 		height="140"
 		viewBox="0 0 111 140"
 		fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg"
 		alt="Experience Arrow"
 		sx={{
 			stroke: `secondary`,
+			"@media screen and (max-width: 1368px)": {
+				display: `none`,
+			},
 		}}
 	>
 		<path
@@ -27,10 +29,13 @@ const SmallArrow = () => (
 		height="76"
 		viewBox="0 0 93 76"
 		fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg"
 		alt="Experience Arrow"
 		sx={{
 			stroke: `secondary`,
+			"@media screen and (min-width: 1368px)": {
+				display: `none`,
+			},
 		}}
 	>
 		<path
@@ -40,40 +45,37 @@ const SmallArrow = () => (
 	</svg>
 )
 
-export default () => {
-    const { width } = useWindowSize()
+export default () => (
+	<div
+		sx={{
+			position: `relative`,
+			gridColumn: 1,
+			gridRow: 1,
 
-	return (
-		<div
-			sx={{
-				position: `relative`,
-				gridColumn: 1,
-				gridRow: 1,
+			"& svg": {
+				position: `absolute`,
+				top: 0,
+				right: 0,
+			},
+
+			"@media screen and (max-width: 1368px)": {
+				gridColumn: 2,
 
 				"& svg": {
-					position: `absolute`,
-					top: 0,
-					right: 0,
+					right: `unset`,
 				},
+			},
 
-				"@media screen and (max-width: 1368px)": {
-					gridColumn: 2,
+			"@media screen and (max-width: 1100px)": {
+				gridColumn: 1,
+			},
 
-					"& svg": {
-						right: `unset`,
-					},
-				},
-
-				"@media screen and (max-width: 1100px)": {
-					gridColumn: 1,
-				},
-
-				"@media screen and (max-width: 880px)": {
-					display: `none`,
-				},
-			}}
-		>
-            {width > 1368 ? <LargeArrow /> : <SmallArrow />}
-        </div>
-	)
-}
+			"@media screen and (max-width: 880px)": {
+				display: `none`,
+			},
+		}}
+	>
+		<LargeArrow />
+		<SmallArrow />
+	</div>
+)

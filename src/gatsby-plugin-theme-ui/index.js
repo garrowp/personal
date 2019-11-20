@@ -39,7 +39,6 @@ export default {
 	gradients: {
 		about: {
 			background: t => {
-				console.log(t)
 				return `linear-gradient(135deg, ${t.colors.primary} 29%, ${t.colors.primaryLight} 102%)`
 			},
 		},

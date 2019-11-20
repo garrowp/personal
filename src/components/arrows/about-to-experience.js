@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import useWindowSize from "../../hooks/useWindowSize"
 
 const LargeArrow = () => (
 	<svg
@@ -8,10 +7,13 @@ const LargeArrow = () => (
 		height="201"
 		viewBox="0 0 111 201"
 		fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg"
 		alt="About to Experience Arrow"
 		sx={{
 			stroke: `accent`,
+			"@media screen and (max-width: 1368px)": {
+				display: `none`,
+			},
 		}}
 	>
 		<path
@@ -27,52 +29,54 @@ const SmallArrow = () => (
 		height="121"
 		viewBox="0 0 46 121"
 		fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg"
 		alt="About to Experience Arrow"
 		sx={{
 			stroke: `accent`,
+			"@media screen and (min-width: 1368px)": {
+				display: `none`,
+			},
 		}}
 	>
 		<path d="M2 0V122M44 38V122" strokeWidth="4" />
 	</svg>
 )
 
-export default () => {
-	const { width } = useWindowSize()
+export default () => (
+	<div
+		sx={{
+			position: `relative`,
+			gridRow: 2,
+			gridColumn: 1,
 
-	return (
-		<div
-			sx={{
-				position: `relative`,
-				gridRow: 2,
-				gridColumn: 1,
+			"& svg": {
+				position: `absolute`,
+				marginBottom: 0,
+				bottom: 0,
+				right: 0,
+			},
+
+			"@media screen and (max-width: 1368px)": {
+				gridColumn: 2,
 
 				"& svg": {
-					position: `absolute`,
-					marginBottom: 0,
-					bottom: 0,
-					right: 0,
+					right: `unset`,
+					left: `24px`,
 				},
+			},
 
-				"@media screen and (max-width: 1368px)": {
-					gridColumn: 2,
+			"@media screen and (max-width: 1100px)": {
+				gridColumn: 1,
+			},
 
-					"& svg": {
-						right: `unset`,
-						left: `24px`,
-					},
-				},
-
-				"@media screen and (max-width: 1100px)": {
-					gridColumn: 1,
-				},
-
-				"@media screen and (max-width: 880px)": {
-					display: `none`,
-				},
-			}}
-		>
-			{width > 1368 ? <LargeArrow /> : <SmallArrow />}
-		</div>
-	)
-}
+			"@media screen and (max-width: 880px)": {
+				display: `none`,
+			},
+		}}
+	>
+		<LargeArrow />
+		<SmallArrow />
+		{/* {width < 1368 ? <SmallArrow /> : <LargeArrow />} */}
+		{/* <Arrow /> */}
+	</div>
+)

@@ -53,7 +53,10 @@ export const PicWrapper = styled.div`
 `
 
 const Banner = () => (
-	<div id="banner" sx={{ position: `relative`, backgroundColor: `background` }}>
+	<div
+		id="banner"
+		sx={{ position: `relative`, backgroundColor: `background` }}
+	>
 		<Wrapper banner>
 			<IntroWrapper>
 				<h2>
