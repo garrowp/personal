@@ -164,7 +164,8 @@ export default () => {
 	}, [allStars])
 
 	useEffect(() => {
-		if (colorMode === "dark") {
+		const theme = localStorage.getItem("theme-ui-color-mode");
+		if (theme === 'dark') {
 			tl.play()
 		}
 	}, [])
