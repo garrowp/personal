@@ -17,7 +17,7 @@ const Image = () => {
     const data = useStaticQuery(graphql`
         query {
             placeholderImage: file(
-                relativePath: { eq: "garrow_badge_photo.jpg" }
+                relativePath: { eq: "profile.jpg" }
             ) {
                 childImageSharp {
                     id

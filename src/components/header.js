@@ -8,7 +8,7 @@ import styled from "@emotion/styled"
 
 import useOnClickOutside from "../hooks/useOnClickOutside"
 import useWindowSize from "../hooks/useWindowSize"
-import Image from "../images/garrow_badge_photo.jpg"
+import Image from "../images/profile-square.jpeg"
 import ToggleColorMode from "./toggle"
 
 const StyledNav = styled.nav`
