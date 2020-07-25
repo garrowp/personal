@@ -9,109 +9,112 @@ import AboutToExperienceArrow from "./arrows/about-to-experience"
 import { Wrapper } from "./common"
 
 export const AboutMeHeaderWrapper = styled.div`
-	grid-column: 2;
-	grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 
-	@media screen and (max-width: 1100px) {
-		grid-column: 1;
-	}
+  @media screen and (max-width: 1100px) {
+    grid-column: 1;
+  }
 `
 
 export const AboutMe = styled.div`
-	grid-column: 2 / 4;
-	grid-row: 2;
+  grid-column: 2 / 4;
+  grid-row: 2;
 
-	@media screen and (max-width: 1100px) {
-		grid-column: 1 / 3;
-	}
+  @media screen and (max-width: 1100px) {
+    grid-column: 1 / 3;
+  }
 `
 
 export const Technologies = styled.ul`
-	column-count: 3;
-	margin-left: 8rem;
+  column-count: 3;
+  margin-left: 8rem;
 
-	list-style: none;
+  list-style: none;
 
-	& li:before {
-		content: "⇨ ";
-	}
+  & li:before {
+    content: "⇨ ";
+  }
 
-	@media screen and (max-width: 880px) {
-		margin-left: 2.5rem;
-		column-count: 2;
-	}
+  @media screen and (max-width: 880px) {
+    margin-left: 2.5rem;
+    column-count: 2;
+  }
 `
 
 const About = () => (
-	<div
-		id="about"
-		sx={{
-			variant: `gradients.about`,
-			backgroundBlendMode: `darken`,
-		}}
-	>
-		<Wrapper about="true">
-			<AboutMeHeaderWrapper>
-				<h1 style={{ marginTop: `5rem` }}>About Me</h1>
-			</AboutMeHeaderWrapper>
-			<AboutMe>
-				<p>
-					In April 2020, I will be graduating from Brigham Young
-					University with a Master's in Information Systems
-					Management.{" "}
-					<span role="img" aria-label="graduation">
-						👨‍🎓🎓
-					</span>{" "}
-					My web development experience ranges from class and personal
-					projects to jobs with BYU Athletics and Adobe Analytics'
-					Workspace UI team. Academically, I have also been involved
-					in research within the field of Information Systems. Most
-					recently, I studied how gender discrepancies in
-					technological majors within higher education can be
-					mitigated to contribute to a better gender balance in STEM.
-				</p>
-				<p>
-					School and work aside, I have a wonderful family! My wife
-					and I met in the Hill Cumorah Pageant in 2008 and have been
-					married since 2016. We have a beautiful little girl named
-					Kora.{" "}
-					<span role="img" aria-label="family">
-						👱‍♂️👱‍♀️👶
-					</span>{" "}
-					Janessa (my wife) is currently enrolled in Lambda School's
-					web development program and is killing it!
-				</p>
-				<p>
-					I lived in Cambodia from 2013-2015 as a missionary for the
-					Church of Jesus Christ of Latter-day Saints.{" "}
-					<span role="img" aria-label="Cambodia Flag">
-						🇰🇭
-					</span>{" "}
-					I learned how to speak, read, and write the language, but
-					I'm getting a bit rusty. If you want to chat in ភាសារខ្មែរ,
-					reach out via my contact info below!{" "}
-					<span role="img" aria-label="Point down">
-						👇
-					</span>
-				</p>
-				<p>Here are a few technologies I love to use:</p>
-				<Technologies>
-					<li>JavaScript</li>
-					<li>React</li>
-					<li>Node</li>
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>PostgreSQL</li>
-					<li>MongoDB</li>
-					<li>Firebase</li>
-					<li>AWS</li>
-				</Technologies>
-			</AboutMe>
-			<AboutCornerArrow />
-			<ToAboutArrow />
-			<AboutToExperienceArrow />
-		</Wrapper>
-	</div>
+  <div
+    id="about"
+    sx={{
+      variant: `gradients.about`,
+      backgroundBlendMode: `darken`,
+    }}
+  >
+    <Wrapper about="true">
+      <AboutMeHeaderWrapper>
+        <h1 style={{ marginTop: `5rem` }}>About Me</h1>
+      </AboutMeHeaderWrapper>
+      <AboutMe>
+        <p>
+          In April 2020, I graduated from Brigham Young University with a
+          Master's in Information Systems Management.{" "}
+          <span role="img" aria-label="graduation">
+            👨‍🎓🎓
+          </span>{" "}
+          I am currently a Jr. Frontend Engineer at MX in Lehi, UT. I'm working
+          on the MoneyMap team, devloping and maintaining a money management
+          platform designed to help users become financially strong. I work
+          mosty with React and Redux, with some RxJS sprinkled in there.
+        </p>
+        <p>
+          Aside from work, I have a wonderful family! My wife and I met in the
+          Hill Cumorah Pageant in 2008 and have been married since 2016. We have
+          a beautiful little girl named Kora.{" "}
+          <span role="img" aria-label="family">
+            👱‍♂️👱‍♀️👶
+          </span>{" "}
+          <a
+            href="https://janessagarrow.com"
+            target="_blank"
+            sx={{ color: "#fff" }}
+          >
+            Janessa
+          </a>{" "}
+          (my wife) is currently enrolled in Lambda School's web development
+          program and is killing it!
+        </p>
+        <p>
+          I lived in Cambodia from 2013-2015 as a missionary for the Church of
+          Jesus Christ of Latter-day Saints.{" "}
+          <span role="img" aria-label="Cambodia Flag">
+            🇰🇭
+          </span>{" "}
+          I learned how to speak, read, and write the language, but I'm getting
+          a bit rusty. If you want to chat in ភាសារខ្មែរ, reach out via my
+          contact info below!{" "}
+          <span role="img" aria-label="Point down">
+            👇
+          </span>
+        </p>
+        <p>Here are a few technologies I love to use:</p>
+        <Technologies>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Gatsby</li>
+          <li>Node</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>PostgreSQL</li>
+          <li>MongoDB</li>
+          <li>Firebase</li>
+          <li>AWS</li>
+        </Technologies>
+      </AboutMe>
+      <AboutCornerArrow />
+      <ToAboutArrow />
+      <AboutToExperienceArrow />
+    </Wrapper>
+  </div>
 )
 
 export default About

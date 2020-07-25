@@ -192,10 +192,10 @@ const NavBar = ({ isMenuOpen, toggleMenu }) => {
 				</StyledLink>
 				<StyledLink
 					offset={checkSize(size.width)}
-					href="#experience"
+					href="#projects"
 					onClick={clickHandler}
 				>
-					Experience
+					Projects
 				</StyledLink>
 				<StyledLink
 					offset={checkSize(size.width)}
