@@ -62,9 +62,9 @@ const About = () => (
             👨‍🎓🎓
           </span>{" "}
           I am currently a Jr. Frontend Engineer at MX in Lehi, UT. I'm working
-          on the MoneyMap team, devloping and maintaining a money management
+          on the MoneyMap team, developing and maintaining a money management
           platform designed to help users become financially strong. I work
-          mosty with React and Redux, with some RxJS sprinkled in there.
+          mostly with React and Redux, with a dash of RxJS.
         </p>
         <p>
           Aside from work, I have a wonderful family! My wife and I met in the
