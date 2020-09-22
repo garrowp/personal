@@ -132,6 +132,32 @@ const Experience = () => (
               ) on <a href="https://codepen.io">CodePen</a>.
             </iframe>
           </ExperienceCard>
+          <ExperienceCard employer="Smash Bros Avatar Style">
+            <iframe
+              height="265"
+              style={{
+                width: `100%`,
+                height: `350px`,
+                marginBottom: 0,
+                padding: `1em 0`,
+              }}
+              scro
+              scrolling="no"
+              title="Smash Bros Avatar Style"
+              src="https://codepen.io/garrowp/embed/PoNaGgB?height=278&theme-id=dark&default-tab=result"
+              frameborder="no"
+              loading="lazy"
+              allowtransparency="true"
+              allowfullscreen="true"
+            >
+              See the Pen{" "}
+              <a href="https://codepen.io/garrowp/pen/PoNaGgB">
+                Smash Bros Avatar Style
+              </a>{" "}
+              by Peter Garrow (<a href="https://codepen.io/garrowp">@garrowp</a>
+              ) on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+          </ExperienceCard>
         </CardContainer>
       </ExperienceWrapper>
       <ExperienceArrow />
