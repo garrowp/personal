@@ -68,7 +68,7 @@ const About = () => (
         </p>
         <p>
           I've been expanding my hobbies and have recently gotten into making
-          css art, bouldering, and 3D printing! They've all been a challenge in
+          CSS art, bouldering, and 3D printing! They've all been a challenge in
           their own unique way, but it's been great to learn new things outside
           of work. I've got some fun projects that I'm hoping to share in the
           near future <span role="img" aria-label="winky face">
