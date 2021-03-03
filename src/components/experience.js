@@ -6,11 +6,9 @@ import ExperienceArrow from "./arrows/experience-arrow"
 import ExperienceToContactArrow from "./arrows/experience-to-contact"
 
 import { ExperienceCard, Card } from "./card"
-import byu from "../images/byu.png"
-import adobe from "../images/adobe.png"
-import byuAthletics from "../images/byu_athletics.png"
 import rp from "../images/rp.png"
-import rpSite from "../images/rpSite.png"
+import pixelArt from "../images/eight-bit-xmas-tree.gif"
+import rpSite from "../images/rpSiteTall.png"
 import { Wrapper } from "./common"
 
 const ExperienceHeaderWrapper = styled.div`
@@ -72,6 +70,7 @@ const Experience = () => (
                 <a href="https://recipepalette.com" target="_blank">
                   Recipe Palette
                 </a>
+                !
               </li>
               <li>
                 Automatically record any changes you make to anyone's recipes,
@@ -87,20 +86,45 @@ const Experience = () => (
             </a>
           </ExperienceCard>
 
-          <ExperienceCard employer="CSS Appa" title="Zoom out to .25x">
+          <ExperienceCard employer="Pixel Art Maker">
+            <StyledUl>
+              <li>
+                Create pixel art at{" "}
+                <a href="https://eight-bit.netlify.app" target="_blank">
+                  https://eight-bit.netlify.app/
+                </a>
+              </li>
+              <li>
+                Optimized performance by only rendering cells in the grid if and
+                when they change
+              </li>
+              <li>
+                Used Framer Motion to create slick animations for the menu
+              </li>
+            </StyledUl>
+            <a href="https://eight-bit.netlify.app/" target="_blank">
+              <img
+                sx={{ marginBottom: 0, padding: `1em 0` }}
+                src={pixelArt}
+                alt="Making a christmas tree in the pixel art maker"
+              />
+            </a>
+          </ExperienceCard>
+
+          <ExperienceCard employer="CSS Appa">
             <iframe
               sx={{
                 width: "100%",
-                height: "300px",
+                height: "350px",
                 marginBottom: 0,
                 padding: `1em 0`,
               }}
               scrolling="no"
               title="CSS Appa"
-              src="https://codepen.io/garrowp/embed/rNOQQjm?height=100&theme-id=dark&default-tab=result"
+              src="https://codepen.io/garrowp/embed/rNOQQjm?height=100&theme-id=dark&default-tab=result&zoom=0.25"
               frameBorder="no"
-              allowTransparency="true"
-              allowFullScreen="true"
+              allowtransparency="true"
+              allowFullScreen={true}
             >
               See the Pen{" "}
               <a href="https://codepen.io/garrowp/pen/rNOQQjm">CSS Appa</a> by
@@ -120,13 +144,38 @@ const Experience = () => (
               scrolling="no"
               title="Black Lives Matter"
               src="https://codepen.io/garrowp/embed/jOWELMw?height=100&theme-id=dark&default-tab=result"
-              frameborder="no"
+              frameBorder="no"
               allowtransparency="true"
-              allowfullscreen="true"
+              allowFullScreen={true}
             >
               See the Pen{" "}
               <a href="https://codepen.io/garrowp/pen/jOWELMw">
                 Black Lives Matter
+              </a>{" "}
+              by Peter Garrow (<a href="https://codepen.io/garrowp">@garrowp</a>
+              ) on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+          </ExperienceCard>
+          <ExperienceCard employer="#nodivember - Animal Crossing Island">
+            <iframe
+              height="265"
+              style={{
+                width: `100%`,
+                height: `350px`,
+                marginBottom: 0,
+                padding: `1em 0`,
+              }}
+              scrolling="no"
+              title="#nodivember - Animal Crossing Island"
+              src="https://codepen.io/garrowp/embed/VwjdqZr?height=278&theme-id=dark&default-tab=result"
+              frameBorder="no"
+              loading="lazy"
+              allowtransparency="true"
+              allowFullScreen={true}
+            >
+              See the Pen{" "}
+              <a href="https://codepen.io/garrowp/pen/VwjdqZr">
+                #nodivember - Animal Crossing Island
               </a>{" "}
               by Peter Garrow (<a href="https://codepen.io/garrowp">@garrowp</a>
               ) on <a href="https://codepen.io">CodePen</a>.
@@ -141,14 +190,13 @@ const Experience = () => (
                 marginBottom: 0,
                 padding: `1em 0`,
               }}
-              scro
               scrolling="no"
               title="Smash Bros Avatar Style"
-              src="https://codepen.io/garrowp/embed/PoNaGgB?height=278&theme-id=dark&default-tab=result"
-              frameborder="no"
+              src="https://codepen.io/garrowp/embed/PoNaGgB?height=278&theme-id=dark&default-tab=result&zoom=0.25"
+              frameBorder="no"
               loading="lazy"
               allowtransparency="true"
-              allowfullscreen="true"
+              allowFullScreen={true}
             >
               See the Pen{" "}
               <a href="https://codepen.io/garrowp/pen/PoNaGgB">
