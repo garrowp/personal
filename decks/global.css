@@ -1,0 +1,123 @@
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+  --red: #FF5C5C;
+  --blue: #70F3FF;
+  --green: #aaff99;
+  --purple: #9a5cff;
+  --orange: #FFBF70;
+}
+
+.ball-step-1 {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+}
+
+.ball-step-2 {
+  position: relative;
+  height: calc(var(--unit) * 100);
+  width: calc(var(--unit) * 100);
+  background: green;
+}
+
+.ball-step-3 {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border: var(--border-size) solid black;
+}
+
+.ball-step-4 {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border: var(--border-size) solid black;
+  border-radius: 50%;
+}
+
+.ball-step-5 {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border: var(--border-size) solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.ball.after::after {
+  content: '';
+  display: block;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 25%;
+  width: 25%;
+  background: radial-gradient(circle, white 50%, black 50% 60%, white 60%);
+  background-repeat: none;
+  border-radius: 50%;
+  border: calc(var(--border-size) * 2) solid black;
+}
+
+.ball.after-step-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 25%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  background: rebeccapurple;
+}
+
+.ball.after-step-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 25%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  border: calc(var(--border-size) * 2) solid black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.top-step-1 {
+  height: 50%;
+  background-color: red;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+
+.bottom-step-1 {
+  height: 50%;
+  background-color: white;
+}

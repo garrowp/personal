@@ -1,0 +1,1828 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { github, vsDark } from "@code-surfer/themes";
+import { Pokeball } from './components/pokeball'
+
+export const theme = github;
+
+# CSS Art 👋
+
+
+---
+
+# What is CSS Art?
+
+<ul>
+  <Appear>
+    <li>Use HTML & CSS to create cool art</li>
+    <li>Preprocessers are commonly used</li>
+    <li>JavaScript typically used sparingly, if at all</li>
+  </Appear>
+</ul>
+
+---
+
+# Cool Examples
+
+<div style={{ display: 'grid', gap: '2em', gridTemplateColumns: 'repeat(3, 1fr)', width: '90%'}} >
+
+<iframe
+  height="400"
+  style="width: 100%;"
+  scrolling="no"
+  title="CSS scenery"
+  src="https://codepen.io/agathaco/embed/Kqzrqv?height=400&theme-id=dark&default-tab=result&zoom=0.25"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/agathaco/pen/Kqzrqv">
+    CSS scenery
+  </a>{" "}
+  by agathaco (
+  <a href="https://codepen.io/agathaco">@agathaco</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<iframe
+  height="400"
+  style="width: 100%;"
+  scrolling="no"
+  title="#nodivember - Island"
+  src="https://codepen.io/garrowp/embed/VwjdqZr?height=400&theme-id=dark&default-tab=result"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/garrowp/pen/VwjdqZr">
+    #nodivember - Island
+  </a>{" "}
+  by Peter Garrow (
+  <a href="https://codepen.io/garrowp">@garrowp</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<iframe
+  height="400"
+  style="width: 100%;"
+  scrolling="no"
+  title="CSS collector’s cabinet"
+  src="https://codepen.io/lynnandtonic/embed/LYGjqOo?height=400&theme-id=dark&default-tab=result&zoom=0.5"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/lynnandtonic/pen/LYGjqOo">
+    CSS collector’s cabinet
+  </a>{" "}
+  by Lynn Fisher (
+  <a href="https://codepen.io/lynnandtonic">
+    @lynnandtonic
+  </a>
+  ) on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+</div>
+
+---
+
+# Common CSS Properties
+
+<ul>
+  <Appear>
+    <li>Background (image, size, position, repeat)</li>
+    <li>Border</li>
+    <li>Border Radius</li>
+    <li>Box Shadow</li>
+    <li>Transform</li>
+    <li>Overflow</li>
+    <li>Position</li>
+  </Appear>
+</ul>
+
+---
+
+# Background
+
+---
+
+<CodeSurferColumns themes={[vsDark, github]}>
+
+<Step>
+
+  ```css
+  .foo {
+    background:
+      background-image
+      background-position / background-size
+      background-repeat
+      background-attachment
+      background-origin
+      background-clip
+      background-color
+    ;
+  }
+  ```
+
+  <div style={{ width: '400px', height: '400px', border: '2px solid black'}} />
+
+</Step>
+
+<Step>
+
+  ```css 3:5,9
+  .foo {
+    background:
+      background-image
+      background-position / background-size
+      background-repeat
+      background-attachment
+      background-origin
+      background-clip
+      background-color
+    ;
+  }
+  ```
+
+  <div style={{ width: '400px', height: '400px', border: '2px solid black'}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url(...) /* background-image */
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: 'url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg")',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    linear-gradient(purple, green) /* background-image */
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: 'linear-gradient(var(--purple), var(--green))',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url(...) /* background-image */
+    0% 0% / 50% 50% /* background-position / background-size */
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: 'url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50%',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url(...) /* background-image */
+    0% 0% / 50% 50% /* background-position / background-size */
+    no-repeat /* background-repeat */
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: 'url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50% no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url(...) /* background-image */
+    0% 0% / 50% 50% /* background-position / background-size */
+    no-repeat /* background-repeat */
+    blue /* background-color */
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: 'url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50% no-repeat var(--blue)',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url('...') 0% 0% / 50% 50% no-repeat,
+    blue
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: 'url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50% no-repeat var(--blue)',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url('...') 0% 0% / 50% 50% no-repeat,
+    linear-gradient(purple, green) 100% 0% / 50% 50% no-repeat,
+    blue
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: `
+    url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50% no-repeat,
+    linear-gradient(var(--purple), var(--green)) 100% 0% / 50% 50% no-repeat,
+    var(--blue)`,
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url('...') 0% 0% / 50% 50% no-repeat,
+    linear-gradient(purple, green) 100% 0% / 50% 50% no-repeat,
+    url('...') 100% 100% / 50% 50% no-repeat,
+    blue
+  ;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: `
+    url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50% no-repeat,
+    linear-gradient(var(--purple), var(--green)) 100% 0% / 50% 50% no-repeat,
+    url("https://mymodernmet.com/wp/wp-content/uploads/2018/04/digital-collage-hybrid-animals-arne-fredriksen-7.jpg") 100% 100% / 50% 50% no-repeat,
+    var(--blue)`,
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background:
+    url('...') 0% 0% / 50% 50%,
+    linear-gradient(purple, green) 100% 0% / 50% 50%,
+    url('...') 100% 100% / 50% 50%,
+    blue
+  ;
+  background-repeat: no-repeat;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  background: `
+    url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg") 0% 0% / 50% 50% no-repeat,
+    linear-gradient(var(--purple), var(--green)) 100% 0% / 50% 50% no-repeat,
+    url("https://mymodernmet.com/wp/wp-content/uploads/2018/04/digital-collage-hybrid-animals-arne-fredriksen-7.jpg") 100% 100% / 50% 50% no-repeat,
+    var(--blue)`,
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.foo {
+  background-image: 
+    url('...'),
+    linear-gradient(purple, green),
+    url('...')
+  ;
+  background-position:
+    0% 0%,
+    100% 0%,
+    100% 100%
+  ;
+  background-size: 
+    50% 50%
+  ;
+  background-color: blue;
+  background-repeat: no-repeat;
+}
+```
+
+<div style={{ 
+  width: '400px',
+  height: '400px',
+  border: '2px solid black',
+  backgroundImage: `
+    url("https://i.pinimg.com/originals/b4/d2/41/b4d241607029a9ae06303c85fb608eef.jpg"),
+    linear-gradient(var(--purple), var(--green)),
+    url("https://mymodernmet.com/wp/wp-content/uploads/2018/04/digital-collage-hybrid-animals-arne-fredriksen-7.jpg")
+  `,
+  backgroundPosition: `
+    0% 0%,
+    100% 0%,
+    100% 100%
+  `,
+  backgroundSize: `
+    50% 50%
+  `,  
+  backgroundColor: 'var(--blue)',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# Linear Gradient
+
+---
+
+<CodeSurferColumns themes={[vsDark, github]}>
+
+<Step>
+
+```css
+  .some-div {
+    height: 300px;
+    width: 600px;
+    background: linear-gradient(red, blue);
+  }
+```
+
+<div style={{ 
+  height: '300px',
+  width: '600px',
+  background: 'linear-gradient(var(--red), var(--blue))'
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    height: 300px;
+    width: 600px;
+    background: linear-gradient(90deg, red, blue);
+  }
+```
+
+<div style={{ 
+  height: '300px',
+  width: '600px',
+  background: 'linear-gradient(90deg, var(--red), var(--blue))'
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    height: 300px;
+    width: 600px;
+    background: linear-gradient(90deg, red 50%, blue 50%);
+  }
+```
+
+<div style={{ 
+  height: '300px',
+  width: '600px',
+  background: 'linear-gradient(90deg, var(--red) 50%, var(--blue) 50%)'
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    height: 300px;
+    width: 600px;
+    background: linear-gradient(90deg, red 25%, blue 25% 50%, purple 50% 75%, green 75%);
+  }
+```
+
+<div style={{ 
+  height: '300px',
+  width: '600px',
+  background: 'linear-gradient(90deg, var(--red) 25%, var(--blue) 25% 50%, var(--purple) 50% 75%, var(--green) 75%)'
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    border: 2px solid black;
+    height: 300px;
+    width: 600px;
+    background: linear-gradient(135deg, transparent 50%, red 50%) 0% 0% / 50% 100%;
+    background-repeat: no-repeat;
+  }
+```
+
+<div style={{ 
+  border: '2px solid black',
+  height: '300px',
+  width: '600px',
+  background: 'linear-gradient(135deg, transparent 50%, var(--red) 50%) 0% 0% / 50% 100% no-repeat',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    border: 2px solid black;
+    height: 300px;
+    width: 600px;
+    background:
+      linear-gradient(135deg, transparent 50%, red 50%) 0% 0% / 50% 100%,
+      linear-gradient(45deg, blue 50%, transparent 50%) 100% 0% / 50% 100%
+    ;
+    background-repeat: no-repeat;
+  }
+```
+
+<div style={{ 
+  border: '2px solid black',
+  height: '300px',
+  width: '600px',
+  background: `
+    linear-gradient(135deg, transparent 50%, var(--red) 50%) 0% 0% / 50% 100% no-repeat,
+    linear-gradient(45deg, var(--blue) 50%, transparent 50%) 100% 0% / 50% 100% no-repeat
+  `,
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    height: 300px;
+    width: 600px;
+    background:
+      linear-gradient(135deg, transparent 50%, red 50%) 0% 0% / 50% 100%,
+      linear-gradient(45deg, blue 50%, transparent 50%) 100% 0% / 50% 100%
+    ;
+    background-repeat: no-repeat;
+  }
+```
+
+<div style={{ 
+  height: '300px',
+  width: '600px',
+  background: `
+    linear-gradient(135deg, transparent 50%, var(--red) 50%) 0% 0% / 50% 100% no-repeat,
+    linear-gradient(45deg, var(--blue) 50%, transparent 50%) 100% 0% / 50% 100% no-repeat
+  `,
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+  .some-div {
+    height: 600px;
+    width: 600px;
+    background:
+      linear-gradient(135deg, transparent 50%, red 50%) 0% 0% / 50% 50%,
+      linear-gradient(45deg, blue 50%, transparent 50%) 100% 0% / 50% 50%,
+      linear-gradient(45deg, transparent 50%, purple 50%) 0% 100% / 50% 50%,
+      linear-gradient(135deg, green 50%, transparent 50%) 100% 100% / 50% 50%
+    ;
+    background-repeat: no-repeat;
+  }
+```
+
+<div style={{ 
+  height: '600px',
+  width: '600px',
+  background: `
+    linear-gradient(135deg, transparent 50%, var(--red) 50%) 0% 0% / 50% 50% no-repeat,
+    linear-gradient(45deg, var(--blue) 50%, transparent 50%) 100% 0% / 50% 50% no-repeat,
+    linear-gradient(45deg, transparent 50%, var(--purple) 50%) 0% 100% / 50% 50% no-repeat,
+    linear-gradient(135deg, var(--green) 50%, transparent 50%) 100% 100% / 50% 50% no-repeat
+  `,
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# Linear Gradient Examples
+
+<div style={{ display: 'grid', gap: '2em', gridTemplateColumns: 'repeat(3, 1fr)', width: '90%'}} >
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="Smash Bros Avatar Style" src="https://codepen.io/garrowp/embed/PoNaGgB?height=400&theme-id=dark&default-tab=result&zoom=0.5" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/garrowp/pen/PoNaGgB'>Smash Bros Avatar Style</a> by Peter Garrow
+  (<a href='https://codepen.io/garrowp'>@garrowp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="Single div CSS Tesla Cybertruck" src="https://codepen.io/lynnandtonic/embed/NWWmzjr?height=400&theme-id=dark&default-tab=result&zoom=0.5" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/lynnandtonic/pen/NWWmzjr'>Single div CSS Tesla Cybertruck</a> by Lynn Fisher
+  (<a href='https://codepen.io/lynnandtonic'>@lynnandtonic</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="CSS Earth" src="https://codepen.io/garrowp/embed/dyGbeYo?height=400&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/garrowp/pen/dyGbeYo'>CSS Earth</a> by Peter Garrow
+  (<a href='https://codepen.io/garrowp'>@garrowp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+</div>
+
+---
+
+# Radial Gradient
+
+---
+
+<CodeSurferColumns themes={[vsDark, github]}>
+
+<Step>
+
+```css
+.bar {
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(green, purple);
+}
+```
+
+<div style={{
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(var(--green), var(--purple))',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.bar {
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(circle, green 50%, purple 50%);
+}
+```
+
+<div style={{
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(circle, var(--green) 50%, var(--purple) 50%)',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(50% 50% at 50% 50%,
+                              green 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(50% 50% at 50% 50%, var(--green) 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat'
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(50% 50% at 50% 50%,
+                              green 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+  border-radius: 50%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(50% 50% at 50% 50%, var(--green) 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+  borderRadius: '50%',
+}} />
+
+</Step>
+
+<Step>
+
+```css
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(50% 50% at 50% 50%,
+                              green 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(50% 50% at 50% 50%, var(--green) 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css 5[30:48]
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(50% 50% at 50% 50%,
+                              black 5%,
+                              green 5% 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(50% 50% at 50% 50%, black 5%, var(--green) 5% 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css 5[42:48]
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(50% 50% at 0% 0%,
+                              black 5%,
+                              green 5% 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(50% 50% at 0% 0%, black 5%, var(--green) 5% 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css 5[42:48]
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(50% 50% at 0% 50%,
+                              black 5%,
+                              green 5% 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(50% 50% at 0% 50%, black 5%, var(--green) 5% 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css 5[31:38]
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(100% 50% at 0% 50%,
+                              black 5%,
+                              green 5% 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(100% 50% at 0% 50%, black 5%, var(--green) 5% 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+<Step>
+
+```css 5[31:38]
+.bar {
+  border-radius: 2px solid black;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(100% 25% at 0% 50%,
+                              black 5%,
+                              green 5% 50%,
+                              purple 50% 70%,
+                              blue 70% 90%,
+                              red 90%)
+                              0% 0% / 100% 100%;
+}
+```
+
+<div style={{
+  border: '2px solid black',
+  height: '500px',
+  width: '500px',
+  background: 'radial-gradient(100% 25% at 0% 50%, black 5%, var(--green) 5% 50%, var(--purple) 50% 70%, var(--blue) 70% 90%,  var(--red) 90%) 0% 0% / 100% 100%',
+  backgroundRepeat: 'no-repeat',
+}} />
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# Radial Gradient Examples
+
+<div style={{ display: 'grid', gap: '2em', gridTemplateColumns: 'repeat(3, 1fr)', width: '90%'}} >
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="CSS Pumpkin" src="https://codepen.io/garrowp/embed/xxOOrJm?height=400&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/garrowp/pen/xxOOrJm'>CSS Pumpkin</a> by Peter Garrow
+  (<a href='https://codepen.io/garrowp'>@garrowp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="CSS Appa" src="https://codepen.io/garrowp/embed/rNOQQjm?height=400&theme-id=dark&default-tab=result&zoom=0.25" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/garrowp/pen/rNOQQjm'>CSS Appa</a> by Peter Garrow
+  (<a href='https://codepen.io/garrowp'>@garrowp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="Single div CSS ship" src="https://codepen.io/lynnandtonic/embed/xxOVbvd?height=400&theme-id=dark&default-tab=result&zoom=0.5" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/lynnandtonic/pen/xxOVbvd'>Single div CSS ship</a> by Lynn Fisher
+  (<a href='https://codepen.io/lynnandtonic'>@lynnandtonic</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+</div>
+
+---
+
+# Putting it All Together
+
+---
+
+<CodeSurferColumns themes={[vsDark, github]}>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.ball:after {
+  content: '';
+  display: block;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 25%;
+  width: 25%;
+  background: radial-gradient(circle, white 50%, black 50% 60%, white 60%);
+  background-repeat: none;
+  border-radius: 50%;
+  border: calc(var(--border-size) * 2) solid black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+```
+
+<iframe height="500" style="width: 500px;" scrolling="no" title="Pokeball" src="https://codepen.io/garrowp/embed/abBMLQx?height=500&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/garrowp/pen/abBMLQx'>Pokeball</a> by Peter Garrow
+  (<a href='https://codepen.io/garrowp'>@garrowp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurferColumns  themes={[vsDark, github]}>
+
+<Step>
+
+```css title="Initial Setup"
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / XX) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+```
+
+<Pokeball />
+
+</Step>
+
+<Step>
+
+```css 1:5 title="border-box all the things!"
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / XX) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+```
+
+<Pokeball />
+
+</Step>
+
+<Step>
+
+```css 7:10 title="Setup CSS Variables" subtitle="Replace 'XX' with intrinsic dimension of original image for the unit"
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / XX) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+```
+
+<Pokeball />
+
+</Step>
+
+<Step>
+
+```css 12:17 title="Center the image"
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+```
+
+<Pokeball />
+
+</Step>
+
+<Step>
+
+```css title="Add the ball div"
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-1' />
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css 21:22 subtitle="Use the responsive unit to set the height and width of the containing div"
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-1' />
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 100);
+  width: calc(var(--unit) * 100);
+  background: green;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-2' />
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-1'>
+    <div className='top-step-1' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-1'>
+    <div className='top-step-1' />
+    <div className='bottom-step-1' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border: calc(var(--unit) * 4) solid black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: calc(var(--unit) * 4) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: calc(var(--unit) * 4) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-3'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border: calc(var(--unit) * 4) solid black;
+  border-radius: 50%;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: calc(var(--unit) * 4) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: calc(var(--unit) * 4) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-4'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border: calc(var(--unit) * 4) solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: calc(var(--unit) * 4) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: calc(var(--unit) * 4) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball-step-5'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px calc(var(--unit) * 4) black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: calc(var(--unit) * 4) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: calc(var(--unit) * 4) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.ball:after {
+  content: '';
+  display: block;
+  height: 25%;
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rebeccapurple;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball after-step-1'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.ball:after {
+  content: '';
+  display: block;
+  height: 25%;
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  border: calc(var(--border-size) * 2) solid black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball after-step-2'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.ball:after {
+  content: '';
+  display: block;
+  height: 25%;
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, white 50%, black 50% 60%, white 60%);
+  border-radius: 50%;
+  border: calc(var(--border-size) * 2) solid black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+```
+
+<Pokeball>
+  <div className='ball after'>
+    <div className='top' />
+    <div className='bottom' />
+  </div>
+</Pokeball>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+
+<CodeSurferColumns themes={[vsDark, github]}>
+
+<Step>
+
+```css
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 250) * 1vmin);
+  --border-size: calc(var(--unit) * 4);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  position: relative;
+  height: calc(var(--unit) * 200);
+  width: calc(var(--unit) * 200);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px var(--border-size) black;
+}
+
+.ball:after {
+  content: '';
+  display: block;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 25%;
+  width: 25%;
+  background: radial-gradient(circle, white 50%, black 50% 60%, white 60%);
+  background-repeat: none;
+  border-radius: 50%;
+  border: calc(var(--border-size) * 2) solid black;
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+  border-bottom: var(--border-size) solid black;
+}
+
+.bottom {
+  height: 50%;
+  background-color: white;
+  border-top: var(--border-size) solid black;
+}
+```
+
+<iframe height="500" style="width: 500px;" scrolling="no" title="Pokeball" src="https://codepen.io/garrowp/embed/abBMLQx?height=500&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/garrowp/pen/abBMLQx'>Pokeball</a> by Peter Garrow
+  (<a href='https://codepen.io/garrowp'>@garrowp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+# Resources
+
+- [CSS Illustration Course](https://egghead.io/courses/create-css-illustrations-b24c)
+- [Advice for Complex CSS Illustrations](https://css-tricks.com/advice-for-complex-css-illustrations/)
+- [Drawing Images with CSS Gradients](https://css-tricks.com/drawing-images-with-css-gradients/)
+- [A Single Div](https://a.singlediv.com)
+- [My Codepen](https://codepen.io/garrowp)
+
