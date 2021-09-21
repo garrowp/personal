@@ -47,6 +47,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [`UA-150656897-1`],
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -68,9 +74,15 @@ module.exports = {
       resolve: `gatsby-theme-mdx-deck`,
       options: {
         mdx: true,
-        contentPath: 'decks',
-        basePath: '/slides',
-      }
+        contentPath: "decks",
+        basePath: "/slides",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-compile-es6-packages",
+      options: {
+        modules: ["@mdx-deck/themes", "@kyper", "@mx-cartographer"],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

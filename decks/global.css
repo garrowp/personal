@@ -2,11 +2,11 @@
   --size: 100;
   --unit: calc((var(--size) / 250) * 1vmin);
   --border-size: calc(var(--unit) * 4);
-  --red: #FF5C5C;
-  --blue: #70F3FF;
+  --red: #ff5c5c;
+  --blue: #70f3ff;
   --green: #aaff99;
   --purple: #9a5cff;
-  --orange: #FFBF70;
+  --orange: #ffbf70;
 }
 
 .ball-step-1 {
@@ -60,22 +60,27 @@
 }
 
 .ball.after::after {
-  content: '';
+  content: "";
   display: block;
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   height: 25%;
   width: 25%;
-  background: radial-gradient(circle, white 50%, black 50% 60%, white 60%);
+  background: radial-gradient(
+    circle,
+    white 50%,
+    black 50% 60%,
+    white 60%
+  );
   background-repeat: none;
   border-radius: 50%;
   border: calc(var(--border-size) * 2) solid black;
 }
 
 .ball.after-step-1::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
@@ -87,7 +92,7 @@
 }
 
 .ball.after-step-2::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
@@ -120,4 +125,92 @@
 .bottom-step-1 {
   height: 50%;
   background-color: white;
+}
+
+.shadow {
+  width: 400px;
+}
+
+.shadow > div:first-child > div:first-child {
+  display: flex;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 800px;
+  min-width: 800px;
+  /* padding: 0 48px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* .cs-scaled-content {
+  display: flex !important;
+  margin: 0 !important;
+  flex-direction: column;
+} */
+
+.cs-content {
+  overflow: scroll !important;
+}
+
+.cs-scaled-content {
+  display: flex !important;
+  flex-direction: column;
+  margin: 0 !important;
+  transform: none !important;
+  max-width: 550px !important;
+  width: 550px !important;
+}
+
+.cs-scaled-content > div:first-child,
+.cs-scaled-content > div:last-child {
+  height: 0px !important;
+}
+
+.cs-scaled-content > div {
+  overflow: visible !important;
+}
+
+.ch-editor-body {
+  height: 500px !important;
+}
+
+.ch-mini-browser {
+  max-width: 800px !important;
+  width: 800px !important;
+  max-height: 900px !important;
+  height: 900px !important;
 }
