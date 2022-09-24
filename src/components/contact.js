@@ -65,13 +65,13 @@ const Contact = () => (
 			>
 				<Icon icon={faTwitterSquare} />
 			</IconLink>
-			<IconLink
+			{/* <IconLink
 				href="mailto:garrow.peter@gmail.com"
 				aria-label="Send me an email"
 				rel="noopener noreferrer"
 			>
 				<Icon icon={faEnvelope} />
-			</IconLink>
+			</IconLink> */}
 			<ToContactArrow />
 		</Wrapper>
 	</div>
