@@ -56,26 +56,18 @@ const About = () => (
       </AboutMeHeaderWrapper>
       <AboutMe>
         <p>
-          In April 2020, I graduated from Brigham Young University with a
-          Master's in Information Systems Management.{" "}
+          I am currently a Senior Frontend Engineer at MX in Lehi, UT. I'm
+          working on the MoneyMap team, developing and maintaining a money
+          management platform designed to help users become financially strong.
+          I work mostly with React and Redux in JavaScript and TypeScript, with a dash of RxJS.
+          {/* In April
+          2020, I graduated from Brigham Young University with a Master's in
+          Information Systems Management.{" "}
           <span role="img" aria-label="graduation">
             👨‍🎓🎓
-          </span>{" "}
-          I am currently a Frontend Engineer at MX in Lehi, UT. I'm working on
-          the MoneyMap team, developing and maintaining a money management
-          platform designed to help users become financially strong. I work
-          mostly with React and Redux, with a dash of RxJS.
+          </span>{" "} */}
         </p>
-        <p>
-          I've been expanding my hobbies and have recently gotten into making
-          CSS art, bouldering, and 3D printing! They've all been a challenge in
-          their own unique way, but it's been great to learn new things outside
-          of work. I've got some fun projects that I'm hoping to share in the
-          near future <span role="img" aria-label="winky face">
-            😉
-          </span>{" "}
-        </p>
-        <p>
+        {/* <p>
           Aside from work, I have a wonderful family! My wife and I met in the
           Hill Cumorah Pageant in 2008 and have been married since 2016. We have
           a beautiful little girl named Kora.{" "}
@@ -90,17 +82,10 @@ const About = () => (
           >
             Janessa
           </a>{" "}
-          (my wife) recently graduated from Lambda School and is now working for{" "}
-          <a
-            href="https://apollographql.com"
-            target="_blank"
-            sx={{ color: "#fff" }}
-          >
-            Apollo GraphQL
-          </a>{" "}
-          building awesome stuff for their education team.
-        </p>
-        <p>
+          (my wife) is currently enrolled in Lambda School's web development
+          program and is killing it!
+        </p> */}
+        {/* <p>
           I lived in Cambodia from 2013-2015 as a missionary for the Church of
           Jesus Christ of Latter-day Saints.{" "}
           <span role="img" aria-label="Cambodia Flag">
@@ -112,7 +97,18 @@ const About = () => (
           <span role="img" aria-label="Point down">
             👇
           </span>
-        </p>
+        </p> */}
+        <p>Here are a few technologies I love to use:</p>
+        <Technologies>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Remix</li>
+          <li>Node</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>PostgreSQL</li>
+        </Technologies>
       </AboutMe>
       <AboutCornerArrow />
       <ToAboutArrow />

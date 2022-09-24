@@ -45,9 +45,9 @@ export function useEventListener(
   // if (!isClient) {
   //   return false
   // }
-  if (!isBrowser) {
-    return false
-  }
+  // if (!isBrowser) {
+  //   return false
+  // }
   // Create a ref that stores handler
   const savedHandler = React.useRef()
   // Update ref.current value if handler changes.

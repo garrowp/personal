@@ -61,20 +61,20 @@ const Banner = () => (
           <span role="img" aria-label="wave">
             👋
           </span>{" "}
-          My name is Peter Garrow.
+          My name is Peter Garrow
         </h2>
-        <Intro>
+        {/* <Intro>
           <div>
             <h3>I'm a </h3>
           </div>
           <div>
             <h3>
-              husband, <br />
-              father, & <br />
-              web developer.
+              frontend engineer, <br />
+              CSS artist, & <br />
+              ATLA stan.
             </h3>
           </div>
-        </Intro>
+        </Intro> */}
       </IntroWrapper>
       <PicWrapper>
         <div className="pic-bkgd" />

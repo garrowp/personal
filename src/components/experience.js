@@ -181,7 +181,7 @@ const Experience = () => (
               ) on <a href="https://codepen.io">CodePen</a>.
             </iframe>
           </ExperienceCard>
-          <ExperienceCard employer="Smash Bros Avatar Style">
+          <ExperienceCard employer="#divtober - Slice">
             <iframe
               height="265"
               style={{
@@ -191,16 +191,66 @@ const Experience = () => (
                 padding: `1em 0`,
               }}
               scrolling="no"
-              title="Smash Bros Avatar Style"
-              src="https://codepen.io/garrowp/embed/PoNaGgB?height=278&theme-id=dark&default-tab=result&zoom=0.25"
+              title="#divtober - Slice"
+              src="https://codepen.io/garrowp/embed/qBXEpjN?height=278&theme-id=dark&default-tab=result"
               frameBorder="no"
               loading="lazy"
               allowtransparency="true"
               allowFullScreen={true}
             >
               See the Pen{" "}
-              <a href="https://codepen.io/garrowp/pen/PoNaGgB">
-                Smash Bros Avatar Style
+              <a href="https://codepen.io/garrowp/pen/qBXEpjN">
+                #divtober - Slice
+              </a>{" "}
+              by Peter Garrow (<a href="https://codepen.io/garrowp">@garrowp</a>
+              ) on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+          </ExperienceCard>
+          <ExperienceCard employer="#divtober - Toxic">
+            <iframe
+              height="265"
+              style={{
+                width: `100%`,
+                height: `350px`,
+                marginBottom: 0,
+                padding: `1em 0`,
+              }}
+              scrolling="no"
+              title="#divtober - Toxic"
+              src="https://codepen.io/garrowp/embed/gOxYmxQ?height=278&theme-id=dark&default-tab=result"
+              frameBorder="no"
+              loading="lazy"
+              allowtransparency="true"
+              allowFullScreen={true}
+            >
+              See the Pen{" "}
+              <a href="https://codepen.io/garrowp/pen/gOxYmxQ">
+                #divtober - Toxic
+              </a>{" "}
+              by Peter Garrow (<a href="https://codepen.io/garrowp">@garrowp</a>
+              ) on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+          </ExperienceCard>
+          <ExperienceCard employer="#divtober - Tired">
+            <iframe
+              height="265"
+              style={{
+                width: `100%`,
+                height: `350px`,
+                marginBottom: 0,
+                padding: `1em 0`,
+              }}
+              scrolling="no"
+              title="#divtober - Tired"
+              src="https://codepen.io/garrowp/embed/yLXdmaJ?height=278&theme-id=dark&default-tab=result"
+              frameBorder="no"
+              loading="lazy"
+              allowtransparency="true"
+              allowFullScreen={true}
+            >
+              See the Pen{" "}
+              <a href="https://codepen.io/garrowp/pen/yLXdmaJ">
+                #divtober - Tired
               </a>{" "}
               by Peter Garrow (<a href="https://codepen.io/garrowp">@garrowp</a>
               ) on <a href="https://codepen.io">CodePen</a>.
