@@ -56,10 +56,9 @@ const About = () => (
       </AboutMeHeaderWrapper>
       <AboutMe>
         <p>
-          I am currently a Senior Frontend Engineer at MX in Lehi, UT. I'm
-          working on the MoneyMap team, developing and maintaining a money
-          management platform designed to help users become financially strong.
-          I work mostly with React and Redux in JavaScript and TypeScript, with a dash of RxJS.
+          I am currently a Senior Frontend Engineer at Level Home. I'm
+          working on the MDU frontend team, building our new property manager experience.
+          I work mostly with Typescrit and React, using both NextJS and Remix at Level Home.
           {/* In April
           2020, I graduated from Brigham Young University with a Master's in
           Information Systems Management.{" "}
