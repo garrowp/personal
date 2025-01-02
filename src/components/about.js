@@ -56,9 +56,9 @@ const About = () => (
       </AboutMeHeaderWrapper>
       <AboutMe>
         <p>
-          I am currently a Senior Frontend Engineer at Level Home. I'm
+          I am currently a Senior Frontend Engineer at Ambient Property Technologies. I'm
           working on the MDU frontend team, building our new property manager experience.
-          I work mostly with Typescrit and React, using both NextJS and Remix at Level Home.
+          I work mostly with Typescript and React, using both NextJS and Remix at Ambient.
           {/* In April
           2020, I graduated from Brigham Young University with a Master's in
           Information Systems Management.{" "}

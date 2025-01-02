@@ -63,7 +63,7 @@ const Experience = () => (
       <ExperienceWrapper>
         <h3>Some of the things that I've done:</h3>
         <CardContainer>
-          <ExperienceCard employer="Recipe Palette" image={rp}>
+          {/* <ExperienceCard employer="Recipe Palette" image={rp}>
             <StyledUl>
               <li>
                 Discover and keep track of your favorite recipes at{" "}
@@ -84,7 +84,7 @@ const Experience = () => (
                 alt="Recipe Palette website image"
               />
             </a>
-          </ExperienceCard>
+          </ExperienceCard> */}
 
           <ExperienceCard employer="Pixel Art Maker">
             <StyledUl>
